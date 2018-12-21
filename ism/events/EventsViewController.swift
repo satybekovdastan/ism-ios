@@ -62,16 +62,7 @@ class EventsViewController: UIViewController,  UICollectionViewDelegate, UIColle
         return cellHome
     }
     
-    // MARK: - UICollectionViewDelegateFlowLayout
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        var height = UIScreen.main.bounds.size.width/2/3+20+12+40+20
-//        if UIDevice.current.userInterfaceIdiom == .pad {
-//            height += 12
-//        }
-//        return CGSize.init(width: UIScreen.main.bounds.size.width/2 - 15, height: height)
-//    }
-    
+  
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.size.width/2 - 15, height: 270)
     }

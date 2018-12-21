@@ -29,7 +29,6 @@ class VideoTableViewCell: UITableViewCell {
         }
     }
     
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         self.title.text = nil

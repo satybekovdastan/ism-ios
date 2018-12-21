@@ -60,19 +60,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // swiftlint:disable force_cast
-        //        let destinationVC = UIStoryboard.init(name: TicketViewController.storyboardId, bundle: nil).instantiateInitialViewController() as! TreeViewFilterViewController
-        //        // swiftlint:enable force_cast
-        //
-        //        destinationVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        //        destinationVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        //        destinationVC.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
-        //        destinationVC.tabBarController?.tabBar.isHidden = true
-        //
-        //        destinationVC.categorySlug = self.items[indexPath.item].slug
-        //
-        //        self.navigationController?.popViewController(animated: false)
-        //        self.present(destinationVC, animated: true, completion: nil)
+        
     }
     
 }
