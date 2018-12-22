@@ -53,7 +53,7 @@ class HomeTestViewController: UIViewController,  UICollectionViewDelegate, UICol
         
         let cellHome = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)as! CollectionViewCell
         
-        cellHome.initCell(item: self.home[indexPath.item])
+        cellHome.item = home[indexPath.item]
         cellHome.layer.borderColor = UIColor.lightGray.cgColor
         cellHome.layer.borderWidth = 0.5
 
@@ -91,6 +91,10 @@ class HomeTestViewController: UIViewController,  UICollectionViewDelegate, UICol
             let newVC = storyboard?.instantiateViewController(withIdentifier:"cellLibrary") as! LibraryViewController
             navigationController?.pushViewController(newVC, animated: true)
         }else if(self.home[indexPath.item].position==2){
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            backItem.tintColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1)
+            navigationItem.backBarButtonItem = backItem
             let newVC = storyboard?.instantiateViewController(withIdentifier:"cellApplicant") as! ApplicantViewController
             navigationController?.pushViewController(newVC, animated: true)
         }else if(self.home[indexPath.item].position==3){

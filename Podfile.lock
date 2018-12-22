@@ -11,6 +11,7 @@ PODS:
   - GooglePlaces (2.7.0):
     - GoogleMaps/Base (= 2.7.0)
   - HMSegmentedControl (1.5.3)
+  - LTHRadioButton (1.2.2)
   - MXPagerView (0.2.1)
   - MXParallaxHeader (0.6.1)
   - MXSegmentedPager (3.3.0):
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - HMSegmentedControl
+  - LTHRadioButton
   - MXPagerView
   - MXParallaxHeader
   - MXSegmentedPager
@@ -47,6 +49,7 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlaces
     - HMSegmentedControl
+    - LTHRadioButton
     - MXPagerView
     - MXParallaxHeader
     - MXSegmentedPager
@@ -62,6 +65,7 @@ SPEC CHECKSUMS:
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  LTHRadioButton: 7a02c232383530c5882f7bef0dfd0f6466f5ff11
   MXPagerView: ede184b5191b2ed689ccf05a750a9978cce42414
   MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
   MXSegmentedPager: a35ebaf939e1629f24db3bb26653c1c557362f59
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: aebb5109ebf7a3cdae3c359741ebfb7cd4bc3a29
+PODFILE CHECKSUM: 3728683e1243732f4def5f0e145ca2ec64f4765c
 
 COCOAPODS: 1.5.3

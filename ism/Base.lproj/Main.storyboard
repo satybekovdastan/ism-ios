@@ -1770,15 +1770,110 @@ By running the above code, a new user node will be inserted in database with a u
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTERNATIOANAL SCOOL OF MEDICINE APPLICATION FOR ADDMISSION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twj-CT-HMH">
                                                 <rect key="frame" x="35" y="16.000000000000004" width="305" height="38.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.55294117647058827" green="0.5725490196078431" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERSONAL INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPs-H7-LIH">
+                                                <rect key="frame" x="35" y="70.333333333333329" width="305" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Please enter your name as it appears on your passport)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-Vb-8AH">
+                                                <rect key="frame" x="24" y="106.66666666666667" width="327" height="38.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35F-pu-rOi">
+                                                <rect key="frame" x="24" y="162" width="327" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GS9-2a-uP5">
+                                                <rect key="frame" x="24" y="209" width="327" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRT-b4-hLU" customClass="LTHRadioButton" customModule="LTHRadioButton">
+                                                <rect key="frame" x="24" y="256" width="25" height="25"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="4ec-6f-bdl"/>
+                                                    <constraint firstAttribute="height" constant="25" id="M1D-jL-qsM"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yac-pL-pdb">
+                                                <rect key="frame" x="69" y="256" width="29" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="3qS-Tm-bk8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dA7-s3-wd1" customClass="LTHRadioButton" customModule="LTHRadioButton">
+                                                <rect key="frame" x="118" y="256" width="25" height="25"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="d0L-wC-D9i"/>
+                                                    <constraint firstAttribute="width" constant="25" id="dmT-Mw-M0T"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-8t-mcN">
+                                                <rect key="frame" x="163" y="256" width="46.666666666666657" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="XXK-gc-saW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7m-5X-sy0" customClass="PaddingLabel" customModule="ism" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="298" width="327" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="lla-RR-GWU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="35F-pu-rOi" firstAttribute="top" secondItem="fYb-Vb-8AH" secondAttribute="bottom" constant="17" id="122-F2-BHL"/>
+                                            <constraint firstItem="fYb-Vb-8AH" firstAttribute="leading" secondItem="8qm-ny-Dks" secondAttribute="leading" constant="24" id="2jy-uP-izu"/>
+                                            <constraint firstItem="GS9-2a-uP5" firstAttribute="leading" secondItem="8qm-ny-Dks" secondAttribute="leading" constant="24" id="4Ja-Dp-jm5"/>
+                                            <constraint firstItem="dA7-s3-wd1" firstAttribute="top" secondItem="GS9-2a-uP5" secondAttribute="bottom" constant="17" id="4xI-Fd-ZrX"/>
+                                            <constraint firstItem="GS9-2a-uP5" firstAttribute="top" secondItem="35F-pu-rOi" secondAttribute="bottom" constant="17" id="6jQ-c5-hcw"/>
+                                            <constraint firstItem="B7m-5X-sy0" firstAttribute="top" secondItem="vRT-b4-hLU" secondAttribute="bottom" constant="17" id="8yX-Z7-LvP"/>
+                                            <constraint firstAttribute="trailing" secondItem="B7m-5X-sy0" secondAttribute="trailing" constant="24" id="DDW-0u-nK4"/>
+                                            <constraint firstItem="fYb-Vb-8AH" firstAttribute="top" secondItem="fPs-H7-LIH" secondAttribute="bottom" constant="17" id="DdV-Zc-OfA"/>
+                                            <constraint firstItem="xk7-8t-mcN" firstAttribute="top" secondItem="GS9-2a-uP5" secondAttribute="bottom" constant="17" id="Gr8-gh-9EZ"/>
+                                            <constraint firstItem="dA7-s3-wd1" firstAttribute="leading" secondItem="Yac-pL-pdb" secondAttribute="trailing" constant="20" id="Lt4-lL-HYU"/>
                                             <constraint firstItem="twj-CT-HMH" firstAttribute="top" secondItem="8qm-ny-Dks" secondAttribute="top" constant="16" id="Nsg-oS-mr7"/>
                                             <constraint firstAttribute="trailing" secondItem="twj-CT-HMH" secondAttribute="trailing" constant="35" id="Wdb-LX-PlQ"/>
+                                            <constraint firstItem="fPs-H7-LIH" firstAttribute="leading" secondItem="8qm-ny-Dks" secondAttribute="leading" constant="35" id="XPr-Rs-fIF"/>
+                                            <constraint firstAttribute="trailing" secondItem="GS9-2a-uP5" secondAttribute="trailing" constant="24" id="XTe-OL-InP"/>
+                                            <constraint firstItem="Yac-pL-pdb" firstAttribute="leading" secondItem="vRT-b4-hLU" secondAttribute="trailing" constant="20" id="ZtW-OH-Akp"/>
+                                            <constraint firstItem="xk7-8t-mcN" firstAttribute="leading" secondItem="dA7-s3-wd1" secondAttribute="trailing" constant="20" id="cer-pT-ou7"/>
                                             <constraint firstItem="twj-CT-HMH" firstAttribute="leading" secondItem="8qm-ny-Dks" secondAttribute="leading" constant="35" id="fyy-yu-gfz"/>
+                                            <constraint firstItem="vRT-b4-hLU" firstAttribute="leading" secondItem="8qm-ny-Dks" secondAttribute="leading" constant="24" id="hIe-VI-n5k"/>
+                                            <constraint firstItem="vRT-b4-hLU" firstAttribute="top" secondItem="GS9-2a-uP5" secondAttribute="bottom" constant="17" id="hVV-0R-GXM"/>
+                                            <constraint firstAttribute="trailing" secondItem="fPs-H7-LIH" secondAttribute="trailing" constant="35" id="p7U-5d-9BG"/>
+                                            <constraint firstItem="35F-pu-rOi" firstAttribute="leading" secondItem="8qm-ny-Dks" secondAttribute="leading" constant="24" id="rE3-dd-Yvn"/>
+                                            <constraint firstAttribute="trailing" secondItem="35F-pu-rOi" secondAttribute="trailing" constant="24" id="tSN-Wg-gXa"/>
+                                            <constraint firstItem="Yac-pL-pdb" firstAttribute="top" secondItem="GS9-2a-uP5" secondAttribute="bottom" constant="17" id="vVZ-cX-EaP"/>
+                                            <constraint firstAttribute="trailing" secondItem="fYb-Vb-8AH" secondAttribute="trailing" constant="24" id="vaC-qN-4r4"/>
+                                            <constraint firstItem="B7m-5X-sy0" firstAttribute="leading" secondItem="8qm-ny-Dks" secondAttribute="leading" constant="24" id="vur-Zd-YKQ"/>
+                                            <constraint firstItem="fPs-H7-LIH" firstAttribute="top" secondItem="twj-CT-HMH" secondAttribute="bottom" constant="16" id="xbl-cv-QTR"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1802,6 +1897,12 @@ By running the above code, a new user node will be inserted in database with a u
                         <viewLayoutGuide key="safeArea" id="ihX-Qk-NTH"/>
                     </view>
                     <size key="freeformSize" width="375" height="1012"/>
+                    <connections>
+                        <outlet property="dateOfBirth" destination="B7m-5X-sy0" id="sr0-I1-WrA"/>
+                        <outlet property="femaleRadioButton" destination="dA7-s3-wd1" id="Qxt-6W-7PY"/>
+                        <outlet property="headerLabel" destination="twj-CT-HMH" id="vV7-qU-dOE"/>
+                        <outlet property="maleRadioButton" destination="vRT-b4-hLU" id="Ude-g0-rBq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4H-5w-P2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1811,10 +1912,10 @@ By running the above code, a new user node will be inserted in database with a u
     <resources>
         <image name="call" width="17" height="17"/>
         <image name="email_black" width="24" height="17"/>
-        <image name="header" width="360" height="202"/>
+        <image name="header" width="1440" height="808"/>
         <image name="home" width="21" height="17"/>
         <image name="house" width="26" height="25"/>
-        <image name="ic_phone" width="20.666666030883789" height="20.666666030883789"/>
+        <image name="ic_phone" width="20" height="20"/>
         <image name="information" width="17" height="17"/>
         <image name="internet" width="17" height="17"/>
         <image name="internet_black" width="25" height="24"/>
