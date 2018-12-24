@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lGd-bo-dbO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Picker View Controller-->
+        <scene sceneID="XZZ-AS-Ydy">
+            <objects>
+                <viewController id="lGd-bo-dbO" customClass="DatePickerViewController" customModule="ism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ky-SY-N7i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJw-jA-aD0">
+                                <rect key="frame" x="37.5" y="133.5" width="300" height="400"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-4y-jDA">
+                                        <rect key="frame" x="0.0" y="46" width="300" height="292"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="292" id="Cr5-D4-gK6"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="567278799.93784904">
+                                            <!--2018-12-23 17:26:39 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="ru_KG"/>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zn-Af-avM">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
+                                        <color key="backgroundColor" red="1" green="0.21117212137615315" blue="0.19059594081340103" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="hgn-gU-LEM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRF-wz-0Xv">
+                                        <rect key="frame" x="93" y="353" width="114" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="uX3-wC-h4D"/>
+                                        </constraints>
+                                        <state key="normal" title="Сохранить дату"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="lGd-bo-dbO" eventType="touchUpInside" id="LSh-70-kpU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0ZL-4y-jDA" firstAttribute="leading" secondItem="eJw-jA-aD0" secondAttribute="leading" id="0WX-dR-MQ1"/>
+                                    <constraint firstAttribute="bottom" secondItem="xRF-wz-0Xv" secondAttribute="bottom" constant="8" id="Ego-Vr-6Cp"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ZL-4y-jDA" secondAttribute="trailing" id="FU6-yh-06i"/>
+                                    <constraint firstAttribute="height" constant="400" id="GoV-Re-BAC"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Zn-Af-avM" secondAttribute="trailing" id="Kik-lE-45Z"/>
+                                    <constraint firstItem="8Zn-Af-avM" firstAttribute="top" secondItem="eJw-jA-aD0" secondAttribute="top" id="ZJf-1c-oUd"/>
+                                    <constraint firstItem="0ZL-4y-jDA" firstAttribute="top" secondItem="8Zn-Af-avM" secondAttribute="bottom" id="bEl-Bx-4p1"/>
+                                    <constraint firstItem="xRF-wz-0Xv" firstAttribute="top" secondItem="0ZL-4y-jDA" secondAttribute="bottom" constant="15" id="dIn-EY-Afu"/>
+                                    <constraint firstAttribute="width" constant="300" id="pw6-kM-mSH"/>
+                                    <constraint firstItem="8Zn-Af-avM" firstAttribute="leading" secondItem="eJw-jA-aD0" secondAttribute="leading" id="udM-o2-uui"/>
+                                    <constraint firstItem="xRF-wz-0Xv" firstAttribute="centerX" secondItem="eJw-jA-aD0" secondAttribute="centerX" id="wj5-5e-Fa5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70759225398936176" green="0.70759225398936176" blue="0.70759225398936176" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eJw-jA-aD0" firstAttribute="centerX" secondItem="7ky-SY-N7i" secondAttribute="centerX" id="1Ce-72-zO8"/>
+                            <constraint firstItem="eJw-jA-aD0" firstAttribute="centerY" secondItem="7ky-SY-N7i" secondAttribute="centerY" id="2iM-8o-sTt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yrC-CR-rgo"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="0ZL-4y-jDA" id="zx8-Ia-c59"/>
+                        <outlet property="saveButton" destination="xRF-wz-0Xv" id="qDy-YV-eoj"/>
+                        <outlet property="titleLabel" destination="8Zn-Af-avM" id="iQA-Yu-8RO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSx-7h-tWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234.40000000000001" y="171.36431784107947"/>
+        </scene>
+    </scenes>
+</document>

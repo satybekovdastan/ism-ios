@@ -24,6 +24,7 @@ pod 'GoogleMaps'
 pod 'GooglePlaces'
 
 pod 'LTHRadioButton'
+pod 'Koyomi'
   # Pods for ism
 
   target 'ismTests' do

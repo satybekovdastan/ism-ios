@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 protocol Reloadable {
     func reloadAfterInternetConnectionEstablished()
 }
@@ -34,7 +35,6 @@ class HomeTestViewController: UIViewController,  UICollectionViewDelegate, UICol
             Home(title: "Ticket Air", icon: UIImage(named: "tickets"), position: 9),
             Home(title: "Ticket Taxi", icon: UIImage(named: "taxi"), position: 10)
         ]
-        
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -68,6 +68,7 @@ class HomeTestViewController: UIViewController,  UICollectionViewDelegate, UICol
         if UIDevice.current.userInterfaceIdiom == .pad {
             height += 12
         }
+        
         return CGSize.init(width: UIScreen.main.bounds.size.width/2 - 15, height: height)
     }
     
@@ -95,11 +96,17 @@ class HomeTestViewController: UIViewController,  UICollectionViewDelegate, UICol
             backItem.title = ""
             backItem.tintColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1)
             navigationItem.backBarButtonItem = backItem
-            let newVC = storyboard?.instantiateViewController(withIdentifier:"cellApplicant") as! ApplicantViewController
+            let storyboard = UIStoryboard(name: "ApplicantViewController", bundle: nil)
+            let newVC = storyboard.instantiateViewController(withIdentifier:"cellApplicant") as! ApplicantViewController
             navigationController?.pushViewController(newVC, animated: true)
         }else if(self.home[indexPath.item].position==3){
             let newVC = storyboard?.instantiateViewController(withIdentifier:"cellStudent") as! StudentViewController
             navigationController?.pushViewController(newVC, animated: true)
+        }else if (self.home[indexPath.item].position==4) {
+            let storyboard = UIStoryboard(name: "ScheduleViewController", bundle: nil)
+            let newVC = storyboard.instantiateInitialViewController()!
+            navigationController?.pushViewController(newVC, animated: true)
+        
         }else if(self.home[indexPath.item].position==5){
             let newVC = storyboard?.instantiateViewController(withIdentifier:"cellPassport") as! PassportViewController
             navigationController?.pushViewController(newVC, animated: true)
