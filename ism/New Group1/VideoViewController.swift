@@ -32,6 +32,9 @@ class VideoViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print("COUNT \(String(describing: response?.count))")
                 if let data = response {
                     self.items = data
+                    for item in self.items {
+                        print("Video \(item.id)")
+                    }
                     self.tableView.reloadData()
                 }
             } else {

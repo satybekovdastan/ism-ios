@@ -57,7 +57,6 @@ class HomeTestViewController: UIViewController,  UICollectionViewDelegate, UICol
         cellHome.layer.borderColor = UIColor.lightGray.cgColor
         cellHome.layer.borderWidth = 0.5
 
-        print("ITEM (asd)")
         return cellHome
     }
 
@@ -97,7 +96,7 @@ class HomeTestViewController: UIViewController,  UICollectionViewDelegate, UICol
             backItem.tintColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1)
             navigationItem.backBarButtonItem = backItem
             let storyboard = UIStoryboard(name: "ApplicantViewController", bundle: nil)
-            let newVC = storyboard.instantiateViewController(withIdentifier:"cellApplicant") as! ApplicantViewController
+            let newVC = storyboard.instantiateViewController(withIdentifier:"cellApplicant1") as! ApplicantViewController
             navigationController?.pushViewController(newVC, animated: true)
         }else if(self.home[indexPath.item].position==3){
             let newVC = storyboard?.instantiateViewController(withIdentifier:"cellStudent") as! StudentViewController

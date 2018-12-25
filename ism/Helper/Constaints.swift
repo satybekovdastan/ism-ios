@@ -11,8 +11,9 @@ import UIKit
 class Constaints: NSObject {
 
     // MARK: Constants
+    
     static let kServerPath = "http://37.230.113.96:8010"
-    //    static let kServerPath = "http://37.230.113.96:8010"
+    
     // MARK: UserDefaults
     
     static let kUDUserToken = "UserToken"

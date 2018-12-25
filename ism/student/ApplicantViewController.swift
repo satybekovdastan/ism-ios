@@ -7,16 +7,9 @@
 //
 
 import UIKit
-import LTHRadioButton
 
 class ApplicantViewController: UIViewController {
 
-    @IBOutlet weak var headerLabel: UILabel!
-    @IBOutlet weak var maleRadioButton: LTHRadioButton!
-    @IBOutlet weak var femaleRadioButton: LTHRadioButton!
-    
-    @IBOutlet weak var dateOfBirth: PaddingLabel!
-    @IBOutlet weak var downloadPhoto: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
@@ -24,29 +17,32 @@ class ApplicantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        scrollView.contentSize = CGSize(width: 375, height: 1500)
-//        scrollView.frame = CGRect(x: 0, y: 0, width: 375, height: 500)
-        scrollView.contentSize = contentView.frame.size
+
         self.navigationItem.title = "ISM"
+
+//        setupRadioButtonListeners()
+//        setupUI()
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(dateOfBirthTapped))
+//        dateOfBirth.isUserInteractionEnabled = true
+//        dateOfBirth.addGestureRecognizer(tap)
+//
+//        observer = NotificationCenter.default.addObserver(forName: .saveDate, object: nil, queue: nil) { (notification) in
+//            let vc = notification.object as! DatePickerViewController
+//            print("hello")
+//            if vc.isDateBirth == true {
+//                self.dateOfBirth.text = vc.formattedDate
+//            }
         
-        setupRadioButtonListeners()
-        setupUI()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dateOfBirthTapped))
-        dateOfBirth.isUserInteractionEnabled = true
-        dateOfBirth.addGestureRecognizer(tap)
+//        }
         
-        observer = NotificationCenter.default.addObserver(forName: .saveDate, object: nil, queue: nil) { (notification) in
-            let vc = notification.object as! DatePickerViewController
-            print("hello")
-            if vc.isDateBirth == true {
-                self.dateOfBirth.text = vc.formattedDate
-            }
-            
-        }
-        
-        let photoTap = UITapGestureRecognizer(target: self, action: #selector(downloadPhotoTapped))
-        downloadPhoto.addGestureRecognizer(photoTap)
+//        let photoTap = UITapGestureRecognizer(target: self, action: #selector(downloadPhotoTapped))
+//        downloadPhoto.addGestureRecognizer(photoTap)
     }
+    
+//    override func viewWillLayoutSubviews(){
+//        super.viewWillLayoutSubviews()
+//        scrollView.contentSize = CGSize(width: 375, height: 1500)
+//    }
     
     @objc func downloadPhotoTapped() {
         let actionSheet = UIAlertController(title: "Photo source", message: "Choose a source", preferredStyle: .actionSheet)
@@ -60,7 +56,6 @@ class ApplicantViewController: UIViewController {
         self.present(actionSheet, animated: true)
     }
     
-   
     @objc func dateOfBirthTapped() {
         let storyboard = UIStoryboard(name: "DatePickerViewController", bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! DatePickerViewController
@@ -70,31 +65,31 @@ class ApplicantViewController: UIViewController {
     
     func setupUI() {
         
-        dateOfBirth.layer.borderColor = UIColor.lightGray.cgColor
-        dateOfBirth.layer.borderWidth = 0.5
-        dateOfBirth.layer.cornerRadius = 3
+//        dateOfBirth.layer.borderColor = UIColor.lightGray.cgColor
+//        dateOfBirth.layer.borderWidth = 0.5
+//        dateOfBirth.layer.cornerRadius = 3
         
     }
     
     func setupRadioButtonListeners() {
-        maleRadioButton.onSelect {
-            self.maleRadioButton.select()
-            self.femaleRadioButton.deselect()
-        }
-        
-        maleRadioButton.onDeselect {
-            self.maleRadioButton.deselect()
-        }
-        
-        femaleRadioButton.onSelect {
-            self.femaleRadioButton.select()
-            self.maleRadioButton.deselect()
-        }
-        
-        femaleRadioButton.onDeselect {
-            self.femaleRadioButton.deselect()
-            
-        }
+//        maleRadioButton.onSelect {
+//            self.maleRadioButton.select()
+//            self.femaleRadioButton.deselect()
+//        }
+//
+//        maleRadioButton.onDeselect {
+//            self.maleRadioButton.deselect()
+//        }
+//
+//        femaleRadioButton.onSelect {
+//            self.femaleRadioButton.select()
+//            self.maleRadioButton.deselect()
+//        }
+//
+//        femaleRadioButton.onDeselect {
+//            self.femaleRadioButton.deselect()
+//
+//        }
     }
     
 

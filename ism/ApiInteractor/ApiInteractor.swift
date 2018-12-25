@@ -48,17 +48,6 @@ class ApiInteractor: NSObject {
         task.resume()
     }
     
-    // MARK: - GET TOKEN
-    
-    private func getToken() -> HTTPHeaders? {
-        if  UserDefaults.standard.string(forKey: Constaints.kUDUserToken) != nil {
-            return ["Authorization": (String(format: "Token %@", UserDefaults.standard.string(forKey: Constaints.kUDUserToken)!)),
-                    "Accept":"application/json"
-            ]
-        } else {
-            return nil
-        }
-    }
     
     // MARK: - GET SPECIALISTS/INSTITUTE LIST
     
@@ -81,7 +70,7 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/core/tickets/")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Tickets]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Tickets]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -99,7 +88,7 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/core/taxi/")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Tickets]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Tickets]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -115,7 +104,7 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/core/books/")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Library]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Library]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -131,7 +120,7 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/students/contacts")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Student]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Student]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -143,12 +132,11 @@ class ApiInteractor: NSObject {
         }
     }
     
-    
     public func getEvents(success:@escaping(_ items:[Event]?, String?) -> Void) {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/core/events/")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Event]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Event]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -164,7 +152,7 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/about")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[About]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[About]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -181,7 +169,7 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/contacts")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Contact]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Contact]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -197,7 +185,7 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/passport_and_visa")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Passport]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Passport]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)
@@ -213,7 +201,55 @@ class ApiInteractor: NSObject {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/core/videos/")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         
-        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: getToken()).responseArray { (response: DataResponse<[Video]>) in
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Video]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+        }
+    }
+    
+    public func getGroup(success:@escaping(_ items:[Group]?, String?) -> Void) {
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/students/group")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Group]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+        }
+    }
+    
+    public func getSemester(success:@escaping(_ items:[Semester]?, String?) -> Void) {
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/students/semesters")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Semester]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+        }
+    }
+    
+    public func getSchedule(groupId: Int, semesterId: Int, success: @escaping(_ items:[Schedule]?, String?) -> Void) {
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/students/schedule?groups=\(groupId)&semester=\(semesterId)")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Schedule]>) in
             switch response.result {
             case .success(let response):
                 success(response, nil)

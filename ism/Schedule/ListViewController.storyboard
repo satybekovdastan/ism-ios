@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="smJ-SH-Lnh" customClass="CustomCell" customModule="ism" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListViewCell" id="smJ-SH-Lnh" customClass="CustomCell" customModule="ism" customModuleProvider="target">
                                         <rect key="frame" x="16" y="0.0" width="343" height="263"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -38,9 +38,6 @@
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vRo-PC-dVb">
                                                     <rect key="frame" x="0.0" y="48.5" width="343" height="214.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="214.5" id="xgC-KH-Iha"/>
-                                                    </constraints>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="85" id="8iV-lI-J53" customClass="TableViewCell" customModule="ism" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="343" height="85"/>
@@ -69,7 +66,7 @@
                                                                             <constraint firstAttribute="height" constant="21" id="Wl0-lV-SGv"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFB-Wd-gTT">
@@ -98,8 +95,8 @@
                                                                 </constraints>
                                                             </tableViewCellContentView>
                                                             <connections>
-                                                                <outlet property="activityLabel" destination="mFB-Wd-gTT" id="2PO-eD-FsH"/>
-                                                                <outlet property="timeLabel" destination="DAJ-4A-Erv" id="kj0-Mp-zeh"/>
+                                                                <outlet property="class_time" destination="DAJ-4A-Erv" id="031-kV-Ere"/>
+                                                                <outlet property="subject" destination="mFB-Wd-gTT" id="DO1-Dd-BhW"/>
                                                             </connections>
                                                         </tableViewCell>
                                                     </prototypes>
@@ -126,21 +123,20 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="tG1-Rt-6Ed" firstAttribute="leading" secondItem="smJ-SH-Lnh" secondAttribute="leading" id="0Kn-gE-Csr"/>
-                                            <constraint firstItem="nc9-3x-Ccb" firstAttribute="top" secondItem="tG1-Rt-6Ed" secondAttribute="bottom" id="7yD-S4-C6j"/>
-                                            <constraint firstItem="vRo-PC-dVb" firstAttribute="top" secondItem="nc9-3x-Ccb" secondAttribute="bottom" id="8Sn-lM-pGw"/>
+                                            <constraint firstAttribute="bottom" secondItem="vRo-PC-dVb" secondAttribute="bottom" id="AOa-6e-vRX"/>
                                             <constraint firstAttribute="trailing" secondItem="nc9-3x-Ccb" secondAttribute="trailing" id="ARf-6D-oAa"/>
                                             <constraint firstAttribute="trailing" secondItem="tG1-Rt-6Ed" secondAttribute="trailing" id="LQS-Ga-xwi"/>
+                                            <constraint firstItem="vRo-PC-dVb" firstAttribute="top" secondItem="nc9-3x-Ccb" secondAttribute="bottom" id="Lmz-ly-Tge"/>
                                             <constraint firstItem="vRo-PC-dVb" firstAttribute="leading" secondItem="smJ-SH-Lnh" secondAttribute="leading" id="N22-BY-Lfc"/>
-                                            <constraint firstAttribute="bottom" secondItem="vRo-PC-dVb" secondAttribute="bottom" id="aIu-gq-kcy"/>
                                             <constraint firstItem="nc9-3x-Ccb" firstAttribute="leading" secondItem="smJ-SH-Lnh" secondAttribute="leading" id="eJ4-ov-VjK"/>
+                                            <constraint firstItem="nc9-3x-Ccb" firstAttribute="top" secondItem="tG1-Rt-6Ed" secondAttribute="bottom" id="m0S-BT-M71"/>
                                             <constraint firstAttribute="trailing" secondItem="vRo-PC-dVb" secondAttribute="trailing" id="mLg-mR-q5A"/>
+                                            <constraint firstItem="tG1-Rt-6Ed" firstAttribute="top" secondItem="smJ-SH-Lnh" secondAttribute="top" constant="6.5" id="zQj-Rg-1VL"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="abbreviatedDateLabel" destination="nc9-3x-Ccb" id="WuX-De-uXf"/>
-                                            <outlet property="dateLabel" destination="tG1-Rt-6Ed" id="RNH-te-ZFL"/>
-                                            <outlet property="fullDateLabel" destination="tG1-Rt-6Ed" id="ggn-85-5Yy"/>
-                                            <outlet property="tableView" destination="vRo-PC-dVb" id="MIt-hp-EWH"/>
-                                            <outlet property="weekDayLabel" destination="nc9-3x-Ccb" id="0mv-AN-dwP"/>
+                                            <outlet property="class_date" destination="tG1-Rt-6Ed" id="M8H-Pw-rGi"/>
+                                            <outlet property="tableView" destination="vRo-PC-dVb" id="u9Z-Nm-aSc"/>
+                                            <outlet property="week_day" destination="nc9-3x-Ccb" id="IY2-KH-Tum"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

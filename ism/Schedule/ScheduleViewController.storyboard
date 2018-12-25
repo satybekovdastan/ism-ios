@@ -30,7 +30,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="eYn-id-qzZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,7 +43,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdr-Gl-cVh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdr-Gl-cVh">
                                 <rect key="frame" x="24" y="334" width="327" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Qct-uV-oCh"/>
@@ -52,7 +52,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clo-uz-rF2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose semester" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clo-uz-rF2">
                                 <rect key="frame" x="24" y="372" width="327" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Uv9-D9-rua"/>
@@ -61,7 +61,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEx-1o-w5Y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEx-1o-w5Y">
                                 <rect key="frame" x="24" y="410" width="327" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="RiD-1s-Gt5"/>
@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxr-V0-4yZ">
-                                <rect key="frame" x="24" y="455" width="327" height="30"/>
+                                <rect key="frame" x="70" y="455" width="235" height="30"/>
                                 <color key="backgroundColor" red="0.55294117649999996" green="0.57254901960000004" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Hx9-Ii-haX"/>
@@ -92,7 +92,7 @@
                             <constraint firstItem="Fnm-cz-ejb" firstAttribute="trailing" secondItem="Rdr-Gl-cVh" secondAttribute="trailing" constant="24" id="G89-4j-Woa"/>
                             <constraint firstItem="wKf-vl-8gT" firstAttribute="leading" secondItem="Fnm-cz-ejb" secondAttribute="leading" constant="24" id="Has-y3-GRu"/>
                             <constraint firstItem="Rdr-Gl-cVh" firstAttribute="leading" secondItem="Fnm-cz-ejb" secondAttribute="leading" constant="24" id="Hzn-tD-dDo"/>
-                            <constraint firstItem="Mxr-V0-4yZ" firstAttribute="leading" secondItem="Fnm-cz-ejb" secondAttribute="leading" constant="24" id="Jd8-tD-bA0"/>
+                            <constraint firstItem="Mxr-V0-4yZ" firstAttribute="leading" secondItem="Fnm-cz-ejb" secondAttribute="leading" constant="70" id="Jd8-tD-bA0"/>
                             <constraint firstItem="Fnm-cz-ejb" firstAttribute="trailing" secondItem="eEx-1o-w5Y" secondAttribute="trailing" constant="24" id="Lga-Z8-PET"/>
                             <constraint firstItem="Fnm-cz-ejb" firstAttribute="trailing" secondItem="BJ5-zG-Lnx" secondAttribute="trailing" constant="24" id="Qao-q3-tQq"/>
                             <constraint firstItem="Mxr-V0-4yZ" firstAttribute="top" secondItem="eEx-1o-w5Y" secondAttribute="bottom" constant="24" id="R0a-Za-vAz"/>
@@ -101,7 +101,7 @@
                             <constraint firstItem="BJ5-zG-Lnx" firstAttribute="top" secondItem="wKf-vl-8gT" secondAttribute="bottom" constant="24" id="Zt5-QS-6Ss"/>
                             <constraint firstItem="BJ5-zG-Lnx" firstAttribute="leading" secondItem="Fnm-cz-ejb" secondAttribute="leading" constant="24" id="aeY-Q3-CnU"/>
                             <constraint firstItem="mxe-q0-aVN" firstAttribute="centerX" secondItem="x7I-ES-ZSg" secondAttribute="centerX" id="cNt-Nb-Gxr"/>
-                            <constraint firstItem="Fnm-cz-ejb" firstAttribute="trailing" secondItem="Mxr-V0-4yZ" secondAttribute="trailing" constant="24" id="f4P-m2-NGS"/>
+                            <constraint firstItem="Fnm-cz-ejb" firstAttribute="trailing" secondItem="Mxr-V0-4yZ" secondAttribute="trailing" constant="70" id="f4P-m2-NGS"/>
                             <constraint firstItem="Fnm-cz-ejb" firstAttribute="trailing" secondItem="wKf-vl-8gT" secondAttribute="trailing" constant="24" id="mYf-n4-CJ9"/>
                             <constraint firstItem="clo-uz-rF2" firstAttribute="leading" secondItem="Fnm-cz-ejb" secondAttribute="leading" constant="24" id="n2N-yZ-IuP"/>
                             <constraint firstItem="mxe-q0-aVN" firstAttribute="top" secondItem="Fnm-cz-ejb" secondAttribute="top" constant="40" id="n4i-OM-eJh"/>
@@ -109,6 +109,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fnm-cz-ejb"/>
                     </view>
+                    <connections>
+                        <outlet property="groupLabel" destination="Rdr-Gl-cVh" id="Mqe-oI-MwJ"/>
+                        <outlet property="semesterLabel" destination="eEx-1o-w5Y" id="qwX-Yk-8jn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUa-nN-XBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
