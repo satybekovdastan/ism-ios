@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="REs-9x-1vV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ism StudentVC-->
+        <scene sceneID="fGO-Ud-4KZ">
+            <objects>
+                <viewController id="REs-9x-1vV" customClass="IsmStudentVC" customModule="ism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="84G-BF-pjv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JyF-ty-HkR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-kM-2u2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="199" id="Kgf-wu-2qV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoX-rE-JHR">
+                                        <rect key="frame" x="8" y="207" width="359" height="1806"/>
+                                        <string key="text">3. Performing CRUD Operations
+Before getting into the android app, I would like to give you basic information about performing CRUD operations on to realtime database. Later we’ll combine all these concepts together to build a simple app with firebase realtime database as backend.
+
+In order to perform any operation on to database whether it can be read or write, you need to get the reference to database first. The below code gives you reference to database JSON top node. From here you need to use the child node names to traverse further.
+
+private DatabaseReference mDatabase;
+ 
+mDatabase = FirebaseDatabase.getInstance().getReference();
+3.1 Inserting Data
+To insert data, you can use setValue() method on to database reference path. This will create or update the value on path provided. For an example below code inserts a node called “copyright” in json top level.
+
+DatabaseReference mRef = mDatabase.getReference("copyright");
+ 
+mRef.setValue("©2016 androidhive. All rights Reserved");
+The realtime database accepts multiple data types String, Long, Double, Boolean, Map&lt;String, Object&gt;, List&lt;Object&gt; to store the data. You can also use custom java objects to store the data which is very helpful when storing model class directly in database.
+
+Let’s say you want to store user profile in the database. First you need to create User model with an empty constructor and other properties.
+
+@IgnoreExtraProperties
+public class User {
+ 
+    public String name;
+    public String email;
+ 
+    // Default constructor required for calls to
+    // DataSnapshot.getValue(User.class)
+    public User() {
+    }
+ 
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+}
+As every user needs a unique Id, you can generate one by calling push() method which creates an empty node with unique key. Then get the reference to ‘users’ node using child() method. Finally use setValue() method to store the user data.
+
+DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
+ 
+// Creating new user node, which returns the unique key value
+// new user node would be /users/$userid/
+String userId = mDatabase.push().getKey();
+ 
+// creating user object
+User user = new User("Ravi Tamada", "ravi@androidhive.info");
+ 
+// pushing user to 'users' node using the userId
+mDatabase.child(userId).setValue(user);
+By running the above code, a new user node will be inserted in database with a unique key value. In general, the user id should be acquired by implementing Firebase Auth in your app which gives you authId that acts as user id.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cHf-kM-2u2" firstAttribute="top" secondItem="JyF-ty-HkR" secondAttribute="top" id="Agl-EE-jSF"/>
+                                    <constraint firstItem="NoX-rE-JHR" firstAttribute="top" secondItem="cHf-kM-2u2" secondAttribute="bottom" constant="8" symbolic="YES" id="DMB-Pt-Pm2"/>
+                                    <constraint firstItem="NoX-rE-JHR" firstAttribute="leading" secondItem="JyF-ty-HkR" secondAttribute="leadingMargin" id="FyO-Zb-w6H"/>
+                                    <constraint firstItem="cHf-kM-2u2" firstAttribute="centerX" secondItem="JyF-ty-HkR" secondAttribute="centerX" id="ZSk-jU-bcs"/>
+                                    <constraint firstAttribute="bottom" secondItem="NoX-rE-JHR" secondAttribute="bottom" constant="506" id="ggW-Sq-sDk"/>
+                                    <constraint firstItem="cHf-kM-2u2" firstAttribute="leading" secondItem="JyF-ty-HkR" secondAttribute="leading" id="l9c-Bv-Bfm"/>
+                                    <constraint firstItem="cHf-kM-2u2" firstAttribute="centerX" secondItem="NoX-rE-JHR" secondAttribute="centerX" id="nda-Vv-uVS"/>
+                                    <constraint firstAttribute="trailing" secondItem="cHf-kM-2u2" secondAttribute="trailing" id="o68-QM-BXq"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JyF-ty-HkR" firstAttribute="top" secondItem="83X-Ze-7q3" secondAttribute="top" id="4q4-dc-BjQ"/>
+                            <constraint firstAttribute="trailing" secondItem="JyF-ty-HkR" secondAttribute="trailing" id="GRy-UG-ZwE"/>
+                            <constraint firstItem="JyF-ty-HkR" firstAttribute="bottom" secondItem="83X-Ze-7q3" secondAttribute="bottom" id="ZpN-T0-kn3"/>
+                            <constraint firstItem="JyF-ty-HkR" firstAttribute="leading" secondItem="84G-BF-pjv" secondAttribute="leading" id="tZE-z3-yBD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="83X-Ze-7q3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wa-3S-kgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10464.799999999999" y="-790.64039408866995"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="header" width="1440" height="808"/>
+    </resources>
+</document>

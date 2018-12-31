@@ -25,6 +25,7 @@ pod 'GooglePlaces'
 
 pod 'LTHRadioButton'
 pod 'Koyomi'
+pod 'Cartography', '~> 3.0'
   # Pods for ism
 
   target 'ismTests' do
