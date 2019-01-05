@@ -275,7 +275,7 @@ ism@ism.edu.kg</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CQD-9U-sNf">
-                                <rect key="frame" x="0.0" y="200" width="375" height="529"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NiB-pY-YFX">
                                     <size key="itemSize" width="195" height="204"/>
@@ -324,22 +324,13 @@ ism@ism.edu.kg</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bebe-rexha" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-pN-uat">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="207-2l-THG"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CQD-9U-sNf" firstAttribute="bottom" secondItem="R9y-XA-Ped" secondAttribute="bottom" id="2Px-NI-BHs"/>
-                            <constraint firstAttribute="trailing" secondItem="6fh-pN-uat" secondAttribute="trailing" id="B2J-yP-XFy"/>
-                            <constraint firstItem="CQD-9U-sNf" firstAttribute="top" secondItem="6fh-pN-uat" secondAttribute="bottom" constant="-100" id="d5d-2a-ctl"/>
+                            <constraint firstItem="CQD-9U-sNf" firstAttribute="top" secondItem="LvC-lV-pUE" secondAttribute="top" id="Dcc-0e-63r"/>
                             <constraint firstItem="CQD-9U-sNf" firstAttribute="trailing" secondItem="R9y-XA-Ped" secondAttribute="trailing" id="orH-zy-waZ"/>
                             <constraint firstItem="CQD-9U-sNf" firstAttribute="leading" secondItem="R9y-XA-Ped" secondAttribute="leading" id="pjO-xk-2Uk"/>
-                            <constraint firstItem="6fh-pN-uat" firstAttribute="leading" secondItem="LvC-lV-pUE" secondAttribute="leading" id="yVy-gy-y7f"/>
-                            <constraint firstItem="6fh-pN-uat" firstAttribute="top" secondItem="LvC-lV-pUE" secondAttribute="top" id="zB6-3x-eyn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R9y-XA-Ped"/>
                     </view>
@@ -784,7 +775,6 @@ ism@ism.edu.kg</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bebe-rexha" width="1000" height="563"/>
         <image name="call" width="17" height="17"/>
         <image name="header" width="1440" height="808"/>
         <image name="homeBar" width="20" height="20"/>

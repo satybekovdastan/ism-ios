@@ -15,11 +15,18 @@ class DatePickerViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var isDateBirth: Bool?
+    var isDateOfIssue: Bool?
+    var isDateOfExpiery: Bool?
+    var isYearOfCompletion: Bool?
     
     var formattedDate: String {
         get {
             let formatter = DateFormatter()
-            formatter.dateStyle = .medium
+            if isYearOfCompletion != nil {
+                formatter.dateFormat = "YYYY"
+            } else {
+                formatter.dateFormat = "YYYY-MM-DD"
+            }
             return formatter.string(from: datePicker.date)
         }
     }
@@ -27,6 +34,7 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupNavBar()
         
         
     }

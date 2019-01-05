@@ -17,6 +17,7 @@ class LibraryVC: UIViewController, UITableViewDelegate, UITableViewDataSource, R
     
     var items = [Library]()
     
+    var docController: UIDocumentInteractionController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,8 @@ class LibraryVC: UIViewController, UITableViewDelegate, UITableViewDataSource, R
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let url = URL(string: "\(items[indexPath.row].book)") else { return }
+        UIApplication.shared.open(url)
     }
     
 }

@@ -82,6 +82,7 @@
 		6EAD53B621D243460071118C /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD53B521D243460071118C /* Semester.swift */; };
 		6EAD53B821D25A1B0071118C /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD53B721D25A1B0071118C /* Schedule.swift */; };
 		6EAD53BA21D262D30071118C /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD53B921D262D30071118C /* Subject.swift */; };
+		6ECB0BA721DF69260034C5D3 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECB0BA621DF69260034C5D3 /* PhotoCell.swift */; };
 		6ED9AED721CE4F4B00A86781 /* CalendarPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9AED621CE4F4B00A86781 /* CalendarPopupViewController.swift */; };
 		6ED9AED921CE6C8B00A86781 /* CalendarPopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED9AED821CE6C8B00A86781 /* CalendarPopupViewController.storyboard */; };
 		6EDB8AC621D0965800DD5DC9 /* ScheduleVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EDB8AC521D0965800DD5DC9 /* ScheduleVC.storyboard */; };
@@ -200,6 +201,7 @@
 		6EAD53B521D243460071118C /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		6EAD53B721D25A1B0071118C /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		6EAD53B921D262D30071118C /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		6ECB0BA621DF69260034C5D3 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		6ED9AED621CE4F4B00A86781 /* CalendarPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPopupViewController.swift; sourceTree = "<group>"; };
 		6ED9AED821CE6C8B00A86781 /* CalendarPopupViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarPopupViewController.storyboard; sourceTree = "<group>"; };
 		6EDB8AC521D0965800DD5DC9 /* ScheduleVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleVC.storyboard; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				2312A4A32187174E0003D07B /* HomeVC.swift */,
 				2325B3D8218C6F5400DC55E2 /* ContactVC.swift */,
 				236BA74921AD0D91005D5C4C /* IsmViewController.swift */,
+				6ECB0BA621DF69260034C5D3 /* PhotoCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				233A97C521C21AF90064E681 /* EventsCVCell.swift in Sources */,
 				6E13242A21D4FDF200AAC185 /* UIViewControllerNavBar.swift in Sources */,
 				23A2C97521C90CAC0022D2DA /* VideoVC.swift in Sources */,
+				6ECB0BA721DF69260034C5D3 /* PhotoCell.swift in Sources */,
 				233A97C321C219110064E681 /* Event.swift in Sources */,
 				2312A4B62188730C0003D07B /* RegistrationViewController.swift in Sources */,
 				23A2C96021C79C660022D2DA /* PassportVC.swift in Sources */,

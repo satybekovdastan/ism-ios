@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Toast_Swift
 
-class ApplicantVC: UIViewController, UITextFieldDelegate {
+class ApplicantVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var activeTextField = UITextField()
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
@@ -32,17 +35,64 @@ class ApplicantVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var schoolInformationTextField: UITextField!
     @IBOutlet weak var schoolNameTextField: UITextField!
     @IBOutlet weak var schoolAddressTextField: UITextField!
-    @IBOutlet weak var yearOfCompletionTextField: UITextField!
+    @IBOutlet weak var yearOfCompletionLabel: UILabel!
     @IBOutlet weak var academicRecordTextField: UITextField!
     @IBOutlet weak var gradeAverageTextField: UITextField!
     @IBOutlet weak var uploadPhotoView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBAction func nextButtonPressed(_ sender: Any) {
+    func validateData() {
         
+        if nameTextField.text!.isEmpty || surnameTextField.text!.isEmpty || isGenderChosen == nil || isDateOfBirthChosen == nil || citizenshipTextField.text!.isEmpty || isMaritalStatusChosen == nil || passportNumberTextField.text!.isEmpty || isDateOfIssueChosen == nil || permanentAdressTextField.text!.isEmpty || isDateOfExpieryChosen == nil || parentNameTextField.text!.isEmpty || motherTextField.text!.isEmpty || fatherTextField.text!.isEmpty || addressOfParentsTextField.text!.isEmpty || contactNumberTextField.text!.isEmpty || statementOfSupportTextField.text!.isEmpty || schoolInformationTextField.text!.isEmpty || schoolNameTextField.text!.isEmpty || isCompletionYearChosen == nil || academicRecordTextField.text!.isEmpty || gradeAverageTextField.text!.isEmpty || imageView.image == nil {
+            
+            let alert = UIAlertController(title: "Error", message: "Please fill out all required fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+            
+        } else {
+            var parameters = [
+                "birthday": "\(dateOfBirthLabel.text)",
+                "fin_support_statement": "\(statementOfSupportTextField.text)",
+                "academic_record": "\(academicRecordTextField.text)",
+                "father": "\(fatherTextField.text)",
+//                "image":
+                "expiry_date": "\(dateOfExpieryLabel.text)",
+                "citizenship": "\(citizenshipTextField.text)",
+                "surname": "\(surnameTextField.text)",
+                "contact_number": "\(contactNumberTextField.text)",
+                "gpa": "\(gradeAverageTextField.text)",
+                "name": "\(nameTextField.text)",
+                "mother": "\(motherTextField.text)",
+                "gender": "\(genderLabel.text)",
+                "issue_date": "\(dateOfIssueLabel.text)",
+                "school_information": "\(schoolInformationTextField.text)",
+                "school_name": "\(schoolNameTextField.text)",
+                "marital_status": "\(maritalStatusLabel.text)",
+                "passport_number": "\(passportNumberTextField.text)",
+                "completion_year": "\(yearOfCompletionLabel.text)",
+                "school_address": "\(schoolAddressTextField.text)",
+                "address": "\(addressOfParentsTextField.text)"
+        
+            ]
+            self.view.makeToastActivity(.center)
+            ApiInteractor.shared.setApplicant(parameters: parameters, selectedImage: imageView.image!) { (success) in
+                self.view.hideToastActivity()
+                print("\(success)")
+            }
+            
+        }
     }
     
-    var observer: NSObjectProtocol?
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        validateData()
+    }
+    
+    var isDateOfBirthChosen: Bool? = nil
+    var isGenderChosen: Bool? = nil
+    var isMaritalStatusChosen: Bool? = nil
+    var isDateOfIssueChosen: Bool? = nil
+    var isDateOfExpieryChosen: Bool? = nil
+    var isCompletionYearChosen: Bool? = nil
     
     func setDelegates() {
         nameTextField.delegate = self
@@ -59,7 +109,6 @@ class ApplicantVC: UIViewController, UITextFieldDelegate {
         schoolInformationTextField.delegate = self
         schoolNameTextField.delegate = self
         schoolAddressTextField.delegate = self
-        yearOfCompletionTextField.delegate = self
         academicRecordTextField.delegate = self
         gradeAverageTextField.delegate = self
         
@@ -71,28 +120,8 @@ class ApplicantVC: UIViewController, UITextFieldDelegate {
         setDelegates()
         
         setNotifications()
-        
-//        setupLabelGestureRecognizers()
-        
-        
-//
-//        observer = NotificationCenter.default.addObserver(forName: .saveDate, object: nil, queue: nil) { (notification) in
-//            let vc = notification.object as! DatePickerViewController
-//            print("hello")
-//            if vc.isDateBirth == true {
-//                self.dateOfBirth.text = vc.formattedDate
-//            }
-        
-//        }
-        
-//        let photoTap = UITapGestureRecognizer(target: self, action: #selector(downloadPhotoTapped))
-//        downloadPhoto.addGestureRecognizer(photoTap)
+
     }
-    
-//    func setupLabelGestureRecognizers() {
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(dateOfBirthLabelTapped))
-//    dateOfBirthLabel.addGestureRecognizer(tap)
-//    }
     
     func setNotifications() {
         
@@ -108,6 +137,7 @@ class ApplicantVC: UIViewController, UITextFieldDelegate {
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
+        NotificationCenter.default.addObserver(self, selector: #selector(saveDate), name: .saveDate, object: nil)
         
     }
     
@@ -115,157 +145,150 @@ class ApplicantVC: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
+    
+    
+    @objc func saveDate(_ notification: NSNotification) {
+        
+        let vc = notification.object as! DatePickerViewController
+        
+        if vc.isDateBirth != nil {
+            dateOfBirthLabel.text = vc.formattedDate
+            isDateOfBirthChosen = true
+        } else if vc.isDateOfIssue != nil {
+            dateOfIssueLabel.text = vc.formattedDate
+            isDateOfIssueChosen = true
+        } else if vc.isDateOfExpiery != nil {
+            dateOfExpieryLabel.text = vc.formattedDate
+            isDateOfExpieryChosen = true
+        } else if vc.isYearOfCompletion != nil {
+            yearOfCompletionLabel.text = vc.formattedDate
+            isCompletionYearChosen = true
+        }
+        
+    }
+
     func adjustInsetForKeyboardShow(_ show: Bool, notification: Notification) {
         let userInfo = notification.userInfo ?? [:]
         let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let adjustmentHeight = (keyboardFrame.height + 20) * (show ? 1 : -1)
 
-        print("Before \(scrollView.contentInset.bottom)")
-
         scrollView.contentInset.bottom +=  adjustmentHeight
         scrollView.scrollIndicatorInsets.bottom += adjustmentHeight
-
-//        viewDidLayoutSubviews()
-//        self.scrollView.layoutIfNeeded()
-        
-//        print("After \(scrollView.contentInset.bottom)")
-        
-//        if (!show) {
-//            scrollView.setContentOffset(CGPoint(x: 0, y: adjustmentHeight), animated: true)
-//
-//        }
         
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
         adjustInsetForKeyboardShow(true, notification: notification)
-        
-//        var userInfo = notification.userInfo!
-//        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-//        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-//
-//        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-//        contentInset.bottom = keyboardFrame.size.height
-//        scrollView.contentInset = contentInset
-        
-//        guard let keyboardFrameValue = notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else {
-//            return
-//        }
-//        let keyboardFrame = view.convert(keyboardFrameValue.cgRectValue, from: nil)
-//        scrollView.contentOffset = CGPoint(x:0, y:keyboardFrame.size.height)
-        
-        
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
-        
-        print("Im hided")
         adjustInsetForKeyboardShow(false, notification: notification)
-        
-//        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-//        scrollView.contentInset = contentInset
-        
-//        scrollView.contentOffset = .zero
     }
     
     @IBAction func hideKeyboard(_ sender: AnyObject) {
-        
-//        nameTextField.endEditing(true)
-//        surnameTextField.endEditing(true)
-//        citizenshipTextField.endEditing(true)
-//        passportNumberTextField.endEditing(true)
-//        permanentAdressTextField.endEditing(true)
-//        parentNameTextField.endEditing(true)
-//        motherTextField.endEditing(true)
-//        fatherTextField.endEditing(true)
-//        addressOfParentsTextField.endEditing(true)
-//        contactNumberTextField.endEditing(true)
-//        statementOfSupportTextField.endEditing(true)
-//        schoolInformationTextField.endEditing(true)
-//        schoolNameTextField.endEditing(true)
-//        schoolAddressTextField.endEditing(true)
-//        yearOfCompletionTextField.endEditing(true)
-//        academicRecordTextField.endEditing(true)
-//        gradeAverageTextField.endEditing(true)
+        activeTextField.endEditing(true)
     }
     
-//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        activeTextField = textField
-//        lastOffset = self.scrollView.contentOffset
-//        return true
-//    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeTextField = textField
+        activeTextField.font = UIFont.systemFont(ofSize: 14)
+        activeTextField.textColor = UIColor.lightGray
+        return true
+    }
     
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        activeTextField!.resignFirstResponder()
-//        activeTextField = nil
-//
-//        return true
-//    }
-//
-//    func addKeyboardObservers() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-//    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        activeTextField.resignFirstResponder()
+
+        return true
+    }
+   
+    @IBAction func genderLabelTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Gender", message: "Please, choose your gender", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Male", style: .default, handler: { (action) in
+            self.genderLabel.text = "Male"
+            self.isGenderChosen = true
+        }))
+        alert.addAction(UIAlertAction(title: "Female", style: .default, handler: { (action) in
+            self.genderLabel.text = "Female"
+            self.isGenderChosen = true
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
     
-//    @objc func keyboardWillShow(notification: NSNotification) {
-//        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-//            keyboardHeight = keyboardSize.height
-//            // so increase contentView's height by keyboard height
-//            UIView.animate(withDuration: 0.3, animations: {
-//                self.constraintContentHeight.constant += self.keyboardHeight
-//            })
-//            // move if keyboard hide input field
-//            let distanceToBottom = self.scrollView.frame.size.height - (activeField?.frame.origin.y)! - (activeField?.frame.size.height)!
-//            let collapseSpace = keyboardHeight - distanceToBottom
-//            if collapseSpace < 0 {
-//                // no collapse
-//                return
-//            }
-//        }
-//    }
+    @IBAction func dateBirthLabelTapped(_ sender: Any) {
+        let vc = UIStoryboard(name: "DatePickerViewController", bundle: nil).instantiateInitialViewController() as! DatePickerViewController
+        vc.isDateBirth = true
+        let navC = UINavigationController(rootViewController: vc)
+        present(navC, animated: true)
+    }
     
-//    @objc func keyboardWillHide(notification: NSNotification) {
-//
-//    }
+    @IBAction func maritalStatusLabelTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Marital status", message: "Please, choose your marital status", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Single", style: .default, handler: { (action) in
+            self.maritalStatusLabel.text = "Single"
+            self.isMaritalStatusChosen = true
+        }))
+        alert.addAction(UIAlertAction(title: "Married", style: .default, handler: { (action) in
+            self.maritalStatusLabel.text = "Married"
+            self.isMaritalStatusChosen = true
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
     
-//    @objc func downloadPhotoTapped() {
-//        let actionSheet = UIAlertController(title: "Photo source", message: "Choose a source", preferredStyle: .actionSheet)
-//        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
-//
-//        }))
-//        actionSheet.addAction(UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
-//
-//        }))
-//        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        self.present(actionSheet, animated: true)
-//    }
+    @IBAction func dateOfIssueLabelTapped(_ sender: Any) {
+        let vc = UIStoryboard(name: "DatePickerViewController", bundle: nil).instantiateInitialViewController() as! DatePickerViewController
+        vc.isDateOfIssue = true
+        let navC = UINavigationController(rootViewController: vc)
+        present(navC, animated: true)
+    }
     
-//    @objc func dateOfBirthLabelTapped() {
-//        let storyboard = UIStoryboard(name: "DatePickerViewController", bundle: nil)
-//        let vc = storyboard.instantiateInitialViewController() as! DatePickerViewController
-//        vc.isDateBirth = true
-//        self.present(vc, animated: true)
-//    }
+    @IBAction func dateOfExpieryLabelTapped(_ sender: Any) {
+        let vc = UIStoryboard(name: "DatePickerViewController", bundle: nil).instantiateInitialViewController() as! DatePickerViewController
+        vc.isDateOfExpiery = true
+        let navC = UINavigationController(rootViewController: vc)
+        present(navC, animated: true)
+    }
     
-    func setupRadioButtonListeners() {
-//        maleRadioButton.onSelect {
-//            self.maleRadioButton.select()
-//            self.femaleRadioButton.deselect()
-//        }
-//
-//        maleRadioButton.onDeselect {
-//            self.maleRadioButton.deselect()
-//        }
-//
-//        femaleRadioButton.onSelect {
-//            self.femaleRadioButton.select()
-//            self.maleRadioButton.deselect()
-//        }
-//
-//        femaleRadioButton.onDeselect {
-//            self.femaleRadioButton.deselect()
-//
-//        }
+    @IBAction func downloadPhotoTapped(_ sender: Any) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        let actionSheet = UIAlertController(title: "Photo source", message: "Choose a source", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true)
+            } else {
+                let alert = UIAlertController(title: "Camera", message: "Camera is not available", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true)
+    }
+    
+    @IBAction func yearOfCompletionLabel(_ sender: Any) {
+        let vc = UIStoryboard(name: "DatePickerViewController", bundle: nil).instantiateInitialViewController() as! DatePickerViewController
+        vc.isYearOfCompletion = true
+        let navC = UINavigationController(rootViewController: vc)
+        present(navC, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageView.image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
 

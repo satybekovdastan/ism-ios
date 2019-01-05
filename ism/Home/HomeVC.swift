@@ -21,9 +21,9 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.bringSubviewToFront(collectionView)
-        collectionView.backgroundColor = .clear
-
+        
+        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
+        
         automaticallyAdjustsScrollViewInsets = false
 
         home = [
@@ -45,21 +45,46 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
         return home.count
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath)
+            return cell
+        }
+        
         let cellHome = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)as! CollectionViewCell
         cellHome.item = home[indexPath.item]
         cellHome.layer.borderColor = UIColor.lightGray.cgColor
-        cellHome.layer.borderWidth = 0.5
+        cellHome.layer.borderWidth = 1
+        collectionView.bringSubviewToFront(cellHome)
+        
         return cellHome
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            collectionView.sendSubviewToBack(cell)
+        }
     }
 
     // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.section == 0 {
+            return CGSize(width: view.bounds.width, height: 250)
+        }
         
         var height = UIScreen.main.bounds.size.width/2/3+20+12+40+20
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -70,7 +95,10 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+        if section == 0 {
+            return UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+        }
+        return UIEdgeInsets.init(top: -70, left: 10, bottom: 10, right: 10)
     }
     
     
@@ -82,12 +110,14 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
     
     // vertical
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
         return 10
     }
     
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            return
+        }
         if (self.home[indexPath.item].position == 1) {
             
             let libraryVC = UIStoryboard(name: "LibraryVC", bundle: nil).instantiateInitialViewController() as! LibraryVC
