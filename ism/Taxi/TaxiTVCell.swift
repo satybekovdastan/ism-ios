@@ -12,38 +12,31 @@ class TaxiTVCell: UITableViewCell {
     
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneLabel2: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var siteLabel: UILabel!
-    var number:String = ""
     
-    func setupCell(item:String, image:String, phone2:String, email:String, url:String) {
-        self.selectionStyle = .none
-        self.phoneLabel.text = item
-        self.phoneLabel2.text = phone2
-        self.emailLabel.text = email
-        self.siteLabel.text = url
-        
-        self.itemImage.sd_setImage(with: URL.init(string: image), completed: nil)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(TicketTVCell.tapFunction))
-        number = item
-        phoneLabel.isUserInteractionEnabled = true
-        phoneLabel.addGestureRecognizer(tap)
-        
-        
+    var phoneNumber: String = ""
+    
+    var item: Tickets? {
+        didSet {
+            self.phoneLabel.text = item?.phone_number
+            self.emailLabel.text = item?.email
+            self.itemImage.sd_setImage(with: URL.init(string: "\(item!.banner)"), completed: nil)
+            self.selectionStyle = .none
+        }
     }
     
-    @objc func tapFunction(sender:UITapGestureRecognizer) {
-        guard let number = URL(string: "tel://" + number) else { return }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(phoneLabelTapped))
+        phoneLabel.addGestureRecognizer(tap)
+    }
+    
+    @objc func phoneLabelTapped(_ sender: UITapGestureRecognizer) {
+        guard let number = URL(string: "tel://" + "\(phoneLabel.text!.replacingOccurrences(of: " ", with: ""))") else {
+            return
+        }
         UIApplication.shared.open(number)
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        self.phoneLabel.text = nil
-        self.itemImage.image = nil
-        self.phoneLabel2.text = nil
-        self.emailLabel.text = nil
-        self.siteLabel.text = nil
-    }
 }

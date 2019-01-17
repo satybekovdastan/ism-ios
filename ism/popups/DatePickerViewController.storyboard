@@ -29,7 +29,7 @@
                                         <date key="date" timeIntervalSinceReferenceDate="567278799.93784904">
                                             <!--2018-12-23 17:26:39 +0000-->
                                         </date>
-                                        <locale key="locale" localeIdentifier="ru_KG"/>
+                                        <locale key="locale" localeIdentifier="en"/>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zn-Af-avM">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
@@ -46,6 +46,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="114" id="uX3-wC-h4D"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="lGd-bo-dbO" eventType="touchUpInside" id="LSh-70-kpU"/>

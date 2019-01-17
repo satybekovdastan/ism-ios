@@ -18,6 +18,7 @@ class DatePickerViewController: UIViewController {
     var isDateOfIssue: Bool?
     var isDateOfExpiery: Bool?
     var isYearOfCompletion: Bool?
+    var isLetterDateBirth: Bool?
     
     var formattedDate: String {
         get {

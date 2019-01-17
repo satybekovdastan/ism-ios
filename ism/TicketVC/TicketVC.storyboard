@@ -29,11 +29,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="320.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6gO-xS-5gt">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bebe-rexha" translatesAutoresizingMaskIntoConstraints="NO" id="6gO-xS-5gt">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="375" id="6Xv-5W-7dh"/>
-                                                        <constraint firstAttribute="height" constant="163" id="MKW-fi-pIU"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="163" id="MKW-fi-pIU"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fr-ZO-pdB">
@@ -43,7 +42,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75r-9q-Loh">
-                                                    <rect key="frame" x="73" y="256" width="302" height="21"/>
+                                                    <rect key="frame" x="73" y="266" width="302" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -76,7 +75,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvU-jd-bLf">
-                                                    <rect key="frame" x="73" y="223" width="300" height="20.5"/>
+                                                    <rect key="frame" x="73" y="223" width="300" height="30.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -142,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bebe-rexha" width="1000" height="563"/>
         <image name="email_black" width="24" height="17"/>
         <image name="internet_black" width="25" height="24"/>
         <image name="phone_black" width="23" height="23"/>

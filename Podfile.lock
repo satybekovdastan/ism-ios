@@ -12,6 +12,7 @@ PODS:
   - GooglePlaces (2.7.0):
     - GoogleMaps/Base (= 2.7.0)
   - HMSegmentedControl (1.5.3)
+  - IQKeyboardManagerSwift (6.2.0)
   - Koyomi (1.2.7)
   - LTHRadioButton (1.2.2)
   - MXPagerView (0.2.1)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - HMSegmentedControl
+  - IQKeyboardManagerSwift
   - Koyomi
   - LTHRadioButton
   - MXPagerView
@@ -54,6 +56,7 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlaces
     - HMSegmentedControl
+    - IQKeyboardManagerSwift
     - Koyomi
     - LTHRadioButton
     - MXPagerView
@@ -72,6 +75,7 @@ SPEC CHECKSUMS:
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Koyomi: f03615b8d2bb5a5a4752c6404a9794ed7ef7b327
   LTHRadioButton: 7a02c232383530c5882f7bef0dfd0f6466f5ff11
   MXPagerView: ede184b5191b2ed689ccf05a750a9978cce42414
@@ -83,6 +87,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 8be4448ac89650f90cfcfb2e1ca69bf691879426
+PODFILE CHECKSUM: 935e349d781750ee02663f4f171aa2f922e0c2e2
 
 COCOAPODS: 1.5.3

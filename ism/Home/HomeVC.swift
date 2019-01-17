@@ -25,6 +25,9 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
         
         automaticallyAdjustsScrollViewInsets = false
+        
+        let heightOfStatusBar = UIApplication.shared.statusBarFrame.height
+        collectionView.contentInset = UIEdgeInsets(top: -heightOfStatusBar, left: 0, bottom: 0, right: 0)
 
         home = [
             Home(title: "Library", icon:  UIImage(named: "library"), position: 1),
@@ -43,7 +46,7 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
         collectionView.delegate = self
         
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -66,7 +69,6 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
         cellHome.item = home[indexPath.item]
         cellHome.layer.borderColor = UIColor.lightGray.cgColor
         cellHome.layer.borderWidth = 1
-        collectionView.bringSubviewToFront(cellHome)
         
         return cellHome
         
@@ -127,8 +129,13 @@ class HomeVC: UIViewController,  UICollectionViewDelegate, UICollectionViewDataS
             
         } else if (self.home[indexPath.item].position == 2){
         
-            let applicantVC = UIStoryboard(name: "ApplicantVC", bundle: nil).instantiateInitialViewController() as! ApplicantVC
-            let navC = UINavigationController(rootViewController: applicantVC)
+////            let applicantVC = UIStoryboard(name: "ApplicantVC", bundle: nil).instantiateInitialViewController() as! ApplicantVC
+////            let navC = UINavigationController(rootViewController: applicantVC)
+//
+//            self.present(navC, animated: true, completion: nil)
+            
+            let letterVC = UIStoryboard(name: "LetterVC", bundle: nil).instantiateInitialViewController() as! LetterVC
+            let navC = UINavigationController(rootViewController: letterVC)
             
             self.present(navC, animated: true, completion: nil)
 

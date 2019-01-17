@@ -14,7 +14,6 @@ class EventsCVCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var date: UILabel!
 
-    
     var item: Event? {
         didSet {
             title.text = item!.title

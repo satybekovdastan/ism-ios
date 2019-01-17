@@ -38,7 +38,6 @@ class ContactsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         }
     }
     
-    
     func reloadAfterInternetConnectionEstablished() {
         self.getStudent()
     }
@@ -52,18 +51,14 @@ class ContactsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "student", for: indexPath) as! ContactsTVCell
 
-        cell.setupCell(item: self.items[indexPath.item])
+        cell.setupCell(item: self.items[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    // MARK: - UICollectionViewDelegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let number = URL(string: "tel://" + items[indexPath.item].number) else {return}
+        guard let number = URL(string: "tel://" + items[indexPath.row].number) else {return}
         UIApplication.shared.open(number)
     }
+    
     
 }

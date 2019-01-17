@@ -72,6 +72,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="AoL-Yb-K7o" secondAttribute="trailing" id="lpQ-2T-PGN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="nameLabel" destination="AoL-Yb-K7o" id="B9i-rA-r8k"/>
                                             <outlet property="numberLabel" destination="8WJ-l7-bnf" id="EhU-c1-crT"/>

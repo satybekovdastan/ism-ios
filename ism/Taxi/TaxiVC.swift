@@ -17,12 +17,14 @@ class TaxiVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Relo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorStyle = .none
         automaticallyAdjustsScrollViewInsets = false
-        self.getTickets()
+        self.getTaxi()
         self.setupNavBar()
     }
     
-    func getTickets() {
+    func getTaxi() {
         self.view.makeToastActivity(.center)
         ApiInteractor.shared.getTaxi{ (response, errorString) in
             self.view.hideToastActivity()
@@ -40,7 +42,7 @@ class TaxiVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Relo
     
     
     func reloadAfterInternetConnectionEstablished() {
-        self.getTickets()
+        self.getTaxi()
     }
     
     // MARK: - TableView Delegate and Data Source
@@ -51,13 +53,13 @@ class TaxiVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Relo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellTaxi", for: indexPath) as! TaxiTVCell
+        cell.item = items[indexPath.row]
         
-        cell.setupCell(item: self.items[indexPath.item].additional_phone_number1, image: items[indexPath.row].banner, phone2: items[indexPath.row].additional_phone_number2, email: items[indexPath.row].email, url: items[indexPath.row].url)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
     }
     
 }

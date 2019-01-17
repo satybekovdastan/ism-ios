@@ -87,7 +87,7 @@ By running the above code, a new user node will be inserted in database with a u
                                     <constraint firstItem="NoX-rE-JHR" firstAttribute="top" secondItem="cHf-kM-2u2" secondAttribute="bottom" constant="8" symbolic="YES" id="DMB-Pt-Pm2"/>
                                     <constraint firstItem="NoX-rE-JHR" firstAttribute="leading" secondItem="JyF-ty-HkR" secondAttribute="leadingMargin" id="FyO-Zb-w6H"/>
                                     <constraint firstItem="cHf-kM-2u2" firstAttribute="centerX" secondItem="JyF-ty-HkR" secondAttribute="centerX" id="ZSk-jU-bcs"/>
-                                    <constraint firstAttribute="bottom" secondItem="NoX-rE-JHR" secondAttribute="bottom" constant="506" id="ggW-Sq-sDk"/>
+                                    <constraint firstAttribute="bottom" secondItem="NoX-rE-JHR" secondAttribute="bottom" id="ggW-Sq-sDk"/>
                                     <constraint firstItem="cHf-kM-2u2" firstAttribute="leading" secondItem="JyF-ty-HkR" secondAttribute="leading" id="l9c-Bv-Bfm"/>
                                     <constraint firstItem="cHf-kM-2u2" firstAttribute="centerX" secondItem="NoX-rE-JHR" secondAttribute="centerX" id="nda-Vv-uVS"/>
                                     <constraint firstAttribute="trailing" secondItem="cHf-kM-2u2" secondAttribute="trailing" id="o68-QM-BXq"/>

@@ -18,7 +18,7 @@ class TicketVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Re
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
-
+        tableView.separatorStyle = .none
         self.getCategories()
         self.setupNavBar()
     }
@@ -56,12 +56,17 @@ class TicketVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Re
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellTicket", for: indexPath) as! TicketTVCell
         
-        cell.setupCell(item: self.items[indexPath.item].additional_phone_number1, image: items[indexPath.row].banner, phone2: items[indexPath.row].additional_phone_number2, email: items[indexPath.row].email, url: items[indexPath.row].url)
+        cell.item = items[indexPath.row]
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 310
     }
 
 }

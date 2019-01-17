@@ -65,7 +65,7 @@ extension UIViewController {
             mes = message!
         }
         let alert = UIAlertController.init(title: nil, message: mes, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction.init(title: "Повторить", style: UIAlertAction.Style.default, handler: { ( _) in
+        alert.addAction(UIAlertAction.init(title: "Repeat", style: UIAlertAction.Style.default, handler: { ( _) in
             reloadable.reloadAfterInternetConnectionEstablished()
         }))
         alert.addAction(UIAlertAction.init(title: "Отмена", style: UIAlertAction.Style.cancel, handler: nil))

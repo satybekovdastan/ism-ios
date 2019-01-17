@@ -12,10 +12,8 @@ class IsmStudentVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        scrollView.bottomAnchor.constraint(equalTo: viewScroll.bottomAnchor).isActive = true
-
+        
         self.setupNavBar()
     }
-    
 
 }

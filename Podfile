@@ -26,6 +26,9 @@ pod 'GooglePlaces'
 pod 'LTHRadioButton'
 pod 'Koyomi'
 pod 'Cartography', '~> 3.0'
+
+pod 'IQKeyboardManagerSwift'
+
   # Pods for ism
 
   target 'ismTests' do

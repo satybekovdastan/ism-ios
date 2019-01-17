@@ -27,6 +27,5 @@ class ContactsTVCell: UITableViewCell {
         self.positionLabel.text = nil
         self.numberLabel.text = nil
     }
-
-
+   
 }

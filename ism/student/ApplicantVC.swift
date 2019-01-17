@@ -43,7 +43,7 @@ class ApplicantVC: UIViewController, UITextFieldDelegate, UIImagePickerControlle
     
     func validateData() {
         
-        if nameTextField.text!.isEmpty || surnameTextField.text!.isEmpty || isGenderChosen == nil || isDateOfBirthChosen == nil || citizenshipTextField.text!.isEmpty || isMaritalStatusChosen == nil || passportNumberTextField.text!.isEmpty || isDateOfIssueChosen == nil || permanentAdressTextField.text!.isEmpty || isDateOfExpieryChosen == nil || parentNameTextField.text!.isEmpty || motherTextField.text!.isEmpty || fatherTextField.text!.isEmpty || addressOfParentsTextField.text!.isEmpty || contactNumberTextField.text!.isEmpty || statementOfSupportTextField.text!.isEmpty || schoolInformationTextField.text!.isEmpty || schoolNameTextField.text!.isEmpty || isCompletionYearChosen == nil || academicRecordTextField.text!.isEmpty || gradeAverageTextField.text!.isEmpty || imageView.image == nil {
+        if nameTextField.text!.isEmpty || surnameTextField.text!.isEmpty || isGenderChosen == nil || isDateOfBirthChosen == nil || citizenshipTextField.text!.isEmpty || isMaritalStatusChosen == nil || isDateOfIssueChosen == nil || isDateOfExpieryChosen == nil || isCompletionYearChosen == nil || gradeAverageTextField.text!.isEmpty || imageView.image == nil {
             
             let alert = UIAlertController(title: "Error", message: "Please fill out all required fields", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -111,7 +111,6 @@ class ApplicantVC: UIViewController, UITextFieldDelegate, UIImagePickerControlle
         schoolAddressTextField.delegate = self
         academicRecordTextField.delegate = self
         gradeAverageTextField.delegate = self
-        
     }
     
     override func viewDidLoad() {
@@ -166,12 +165,12 @@ class ApplicantVC: UIViewController, UITextFieldDelegate, UIImagePickerControlle
         }
         
     }
-
+    
     func adjustInsetForKeyboardShow(_ show: Bool, notification: Notification) {
         let userInfo = notification.userInfo ?? [:]
         let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let adjustmentHeight = (keyboardFrame.height + 20) * (show ? 1 : -1)
-
+        
         scrollView.contentInset.bottom +=  adjustmentHeight
         scrollView.scrollIndicatorInsets.bottom += adjustmentHeight
         

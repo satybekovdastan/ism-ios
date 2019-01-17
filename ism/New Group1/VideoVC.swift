@@ -33,9 +33,6 @@ class VideoVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Rel
                     
                     self.items = data
                     
-                    for item in self.items {
-                        print("Video \(item.title)")
-                    }
                     self.tableView.reloadData()
                 }
             } else {
@@ -61,7 +58,7 @@ class VideoVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Rel
         cell.setupCell(item: self.items[indexPath.item])
         
         cell.share.tag = indexPath.row
-        let tap = UITapGestureRecognizer(target: self, action: #selector(TicketTVCell.tapFunction))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
         videoURL = self.items[indexPath.item].youtube_video_id
         cell.share.isUserInteractionEnabled = true
         cell.share.addGestureRecognizer(tap)

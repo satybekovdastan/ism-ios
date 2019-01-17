@@ -18,45 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osO-sO-kWp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osO-sO-kWp">
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMb-Hx-eR4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qGt-2g-kJ2">
-                                                <rect key="frame" x="8" y="210" width="359" height="33"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vc-VZ-9WX" customClass="YTPlayerView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="375" id="5EM-Hd-4BP"/>
-                                                    <constraint firstAttribute="height" constant="210" id="MBa-Ut-NOc"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="qGt-2g-kJ2" secondAttribute="trailing" constant="8" id="9cb-2z-7YY"/>
-                                            <constraint firstItem="2vc-VZ-9WX" firstAttribute="top" secondItem="UMb-Hx-eR4" secondAttribute="top" id="Nt6-T4-m3U"/>
-                                            <constraint firstAttribute="bottom" secondItem="qGt-2g-kJ2" secondAttribute="bottom" constant="10" id="Uzs-rc-DhD"/>
-                                            <constraint firstAttribute="trailing" secondItem="2vc-VZ-9WX" secondAttribute="trailing" id="jJO-jB-vL5"/>
-                                            <constraint firstItem="qGt-2g-kJ2" firstAttribute="leading" secondItem="UMb-Hx-eR4" secondAttribute="leading" constant="8" id="pcU-i4-N6v"/>
-                                            <constraint firstItem="qGt-2g-kJ2" firstAttribute="top" secondItem="2vc-VZ-9WX" secondAttribute="bottom" id="rJH-gu-ayZ"/>
-                                            <constraint firstItem="2vc-VZ-9WX" firstAttribute="leading" secondItem="UMb-Hx-eR4" secondAttribute="leading" id="y5w-oa-JJp"/>
-                                        </constraints>
-                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-cb-YDH">
+                                        <rect key="frame" x="45" y="45" width="500" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="UMb-Hx-eR4" firstAttribute="top" secondItem="osO-sO-kWp" secondAttribute="top" id="19f-QV-zfH"/>
-                                    <constraint firstItem="UMb-Hx-eR4" firstAttribute="width" secondItem="osO-sO-kWp" secondAttribute="width" id="7me-dJ-na8"/>
-                                    <constraint firstAttribute="bottom" secondItem="UMb-Hx-eR4" secondAttribute="bottom" id="CuR-pI-6zc"/>
-                                    <constraint firstAttribute="trailing" secondItem="UMb-Hx-eR4" secondAttribute="trailing" id="Go2-Js-zZU"/>
-                                    <constraint firstItem="UMb-Hx-eR4" firstAttribute="leading" secondItem="osO-sO-kWp" secondAttribute="leading" id="aDA-XZ-OSp"/>
+                                    <constraint firstItem="eVa-cb-YDH" firstAttribute="leading" secondItem="osO-sO-kWp" secondAttribute="leading" constant="45" id="HBf-Rk-CCY"/>
+                                    <constraint firstItem="eVa-cb-YDH" firstAttribute="top" secondItem="osO-sO-kWp" secondAttribute="top" constant="45" id="ckz-a1-ATA"/>
+                                    <constraint firstAttribute="trailing" secondItem="eVa-cb-YDH" secondAttribute="trailing" constant="45" id="ktD-Rv-qTS"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -71,8 +46,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="About us" id="R3l-w8-kSt"/>
                     <connections>
-                        <outlet property="textViewDescription" destination="qGt-2g-kJ2" id="bX8-Gl-iFH"/>
-                        <outlet property="youtubeView" destination="2vc-VZ-9WX" id="7n5-NI-QdQ"/>
+                        <outlet property="label" destination="eVa-cb-YDH" id="6kY-HP-O0E"/>
+                        <outlet property="scrollView" destination="osO-sO-kWp" id="Fba-y6-w0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dM-Je-nmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,19 +63,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSj-Ar-GIx">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZrF-ff-23Z" firstAttribute="bottom" secondItem="BSj-Ar-GIx" secondAttribute="bottom" id="Tkk-iQ-r1x"/>
-                            <constraint firstItem="BSj-Ar-GIx" firstAttribute="leading" secondItem="ZrF-ff-23Z" secondAttribute="leading" id="eff-Rx-K88"/>
-                            <constraint firstItem="BSj-Ar-GIx" firstAttribute="top" secondItem="ZrF-ff-23Z" secondAttribute="top" id="qXg-qH-149"/>
-                            <constraint firstItem="ZrF-ff-23Z" firstAttribute="trailing" secondItem="BSj-Ar-GIx" secondAttribute="trailing" id="qbi-3L-3Z1"/>
+                            <constraint firstAttribute="bottom" secondItem="BSj-Ar-GIx" secondAttribute="bottom" id="5VB-Pf-fLT"/>
+                            <constraint firstItem="BSj-Ar-GIx" firstAttribute="top" secondItem="njs-OF-S1Q" secondAttribute="top" id="7Mz-Rt-fhf"/>
+                            <constraint firstItem="BSj-Ar-GIx" firstAttribute="leading" secondItem="njs-OF-S1Q" secondAttribute="leading" id="Tio-rF-egn"/>
+                            <constraint firstAttribute="trailing" secondItem="BSj-Ar-GIx" secondAttribute="trailing" id="YNi-oh-eh4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZrF-ff-23Z"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="ISM" image="internet" id="kEE-xa-YDc"/>
                     <navigationItem key="navigationItem" title="ISM" id="9xD-1b-w67"/>
                     <connections>
                         <outlet property="webView" destination="BSj-Ar-GIx" id="him-zZ-ZlT"/>
@@ -108,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8N-E8-ugp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1599.2" y="623.64532019704438"/>
+            <point key="canvasLocation" x="793" y="606"/>
         </scene>
         <!--Contact-->
         <scene sceneID="DpV-fV-yeM">
@@ -118,11 +94,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-oZ-DcT">
-                                <rect key="frame" x="63" y="452" width="296" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" translatesAutoresizingMaskIntoConstraints="NO" id="BmC-gM-ibY">
+                                <rect key="frame" x="16" y="409" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="alw-Fy-cY7"/>
-                                    <constraint firstAttribute="width" constant="296" id="xdR-c9-9Yr"/>
+                                    <constraint firstAttribute="width" constant="25" id="U2S-V1-qKi"/>
+                                    <constraint firstAttribute="height" constant="25" id="wbA-dU-xfU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="nIQ-kt-Qkp">
+                                <rect key="frame" x="16" y="460" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Y2Z-7U-cC1"/>
+                                    <constraint firstAttribute="width" constant="25" id="uvB-sr-1NY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuI-o8-Q1I">
+                                <rect key="frame" x="57" y="472" width="302" height="21"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Tf9-KM-IVE"/>
                                 </constraints>
                                 <string key="text">Bishkek, Kyrgyzstan 
 Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
@@ -138,72 +128,33 @@ Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
 
 ism@ism.edu.kg</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" translatesAutoresizingMaskIntoConstraints="NO" id="BmC-gM-ibY">
-                                <rect key="frame" x="16" y="450" width="26" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="26" id="LSl-tw-fhL"/>
-                                    <constraint firstAttribute="height" constant="25" id="mbV-2D-BDg"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="nIQ-kt-Qkp">
-                                <rect key="frame" x="16" y="504" width="26" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="cIN-mX-CdH"/>
-                                    <constraint firstAttribute="width" constant="26" id="lU6-3X-Qoi"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuI-o8-Q1I">
-                                <rect key="frame" x="63" y="522" width="296" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="296" id="KsA-g5-ieS"/>
-                                    <constraint firstAttribute="height" constant="21" id="XC7-O5-PzY"/>
-                                </constraints>
-                                <string key="text">Bishkek, Kyrgyzstan 
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bd4-RS-xsS" appends="YES" id="lvh-x5-16b"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ism@ism.edu.kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-RO-WNs">
-                                <rect key="frame" x="63" y="556" width="125" height="21"/>
+                                <rect key="frame" x="57" y="512" width="302" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="yvX-EW-pwJ"/>
-                                    <constraint firstAttribute="height" constant="21" id="zpg-7Y-0Ue"/>
+                                    <constraint firstAttribute="height" constant="21" id="WO2-1b-KoK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="hjw-vK-tK9">
-                                <rect key="frame" x="16" y="557" width="26" height="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="hjw-vK-tK9">
+                                <rect key="frame" x="16" y="511" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="26" id="LZD-aW-71l"/>
-                                    <constraint firstAttribute="height" constant="17" id="ojc-6K-NhV"/>
+                                    <constraint firstAttribute="height" constant="25" id="XAU-mL-Rg1"/>
+                                    <constraint firstAttribute="width" constant="25" id="nJH-OE-6UC"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFj-xX-6ZI" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="88" width="375" height="335"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-Hx-Xj1">
-                                <rect key="frame" x="63" y="493" width="296" height="21"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-Hx-Xj1">
+                                <rect key="frame" x="57" y="451" width="302" height="21"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="296" id="DJA-BG-Jbb"/>
-                                    <constraint firstAttribute="height" constant="21" id="pLU-Fa-v2u"/>
+                                    <constraint firstAttribute="height" constant="21" id="pZO-4x-Bkm"/>
                                 </constraints>
                                 <string key="text">Bishkek, Kyrgyzstan 
 Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
@@ -219,37 +170,64 @@ Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
 
 ism@ism.edu.kg</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hgE-5z-HzH" appends="YES" id="LIO-S0-CMc"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-oZ-DcT">
+                                <rect key="frame" x="57" y="400" width="302" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="WVI-hm-OQt"/>
+                                </constraints>
+                                <string key="text">Bishkek, Kyrgyzstan 
+Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
+
++996 312 653673
++996 312 644402
+
+ism@ism.edu.kg
+Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
+
++996 312 653673
++996 312 644402
+
+ism@ism.edu.kg</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Oal-36-mec">
+                                <rect key="frame" x="0.0" y="88" width="375" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="272" id="btn-FH-uF7"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="bottom" secondItem="lqg-RO-WNs" secondAttribute="bottom" constant="152" id="07t-BN-cIQ"/>
-                            <constraint firstItem="sFj-xX-6ZI" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" id="1K6-IX-Nu8"/>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="wNq-Hx-Xj1" secondAttribute="trailing" constant="16" id="1jK-bc-Qwj"/>
-                            <constraint firstItem="L8G-oZ-DcT" firstAttribute="leading" secondItem="BmC-gM-ibY" secondAttribute="trailing" constant="21" id="2pI-bz-BzS"/>
-                            <constraint firstItem="hjw-vK-tK9" firstAttribute="top" secondItem="nIQ-kt-Qkp" secondAttribute="bottom" constant="30" id="3jH-PI-Qsb"/>
-                            <constraint firstItem="wNq-Hx-Xj1" firstAttribute="leading" secondItem="nIQ-kt-Qkp" secondAttribute="trailing" constant="21" id="Afp-ZM-Tzm"/>
-                            <constraint firstItem="lqg-RO-WNs" firstAttribute="leading" secondItem="hjw-vK-tK9" secondAttribute="trailing" constant="21" id="CZu-rr-naY"/>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="bottom" secondItem="hjw-vK-tK9" secondAttribute="bottom" constant="155" id="D0J-WC-f0y"/>
-                            <constraint firstItem="hjw-vK-tK9" firstAttribute="top" secondItem="nIQ-kt-Qkp" secondAttribute="bottom" constant="30" id="ErF-vg-1K1"/>
-                            <constraint firstItem="nIQ-kt-Qkp" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="Fid-c2-0Pw"/>
-                            <constraint firstItem="lqg-RO-WNs" firstAttribute="leading" secondItem="hjw-vK-tK9" secondAttribute="trailing" constant="21" id="FkO-Yn-ipz"/>
-                            <constraint firstItem="wNq-Hx-Xj1" firstAttribute="top" secondItem="L8G-oZ-DcT" secondAttribute="bottom" constant="20" id="LVl-PX-3eo"/>
-                            <constraint firstItem="BmC-gM-ibY" firstAttribute="top" secondItem="sFj-xX-6ZI" secondAttribute="bottom" constant="27" id="NbP-aN-Oz8"/>
-                            <constraint firstItem="hjw-vK-tK9" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="VMb-Vw-1k2"/>
-                            <constraint firstItem="sFj-xX-6ZI" firstAttribute="trailing" secondItem="sJE-jk-iCs" secondAttribute="trailing" id="YWc-Nd-Ave"/>
-                            <constraint firstItem="XuI-o8-Q1I" firstAttribute="leading" secondItem="wNq-Hx-Xj1" secondAttribute="leading" id="Z48-Ke-94B"/>
-                            <constraint firstItem="lqg-RO-WNs" firstAttribute="top" secondItem="wNq-Hx-Xj1" secondAttribute="bottom" constant="42" id="Z9n-T6-7N9"/>
-                            <constraint firstItem="lqg-RO-WNs" firstAttribute="top" secondItem="wNq-Hx-Xj1" secondAttribute="bottom" constant="42" id="dIP-lk-VvA"/>
-                            <constraint firstItem="XuI-o8-Q1I" firstAttribute="top" secondItem="wNq-Hx-Xj1" secondAttribute="bottom" constant="8" symbolic="YES" id="eTn-Fp-nDr"/>
-                            <constraint firstItem="BmC-gM-ibY" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="f9m-7N-kvv"/>
-                            <constraint firstItem="wNq-Hx-Xj1" firstAttribute="leading" secondItem="nIQ-kt-Qkp" secondAttribute="trailing" constant="21" id="kbf-1G-XsR"/>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="L8G-oZ-DcT" secondAttribute="trailing" constant="16" id="oC2-ks-esx"/>
-                            <constraint firstItem="L8G-oZ-DcT" firstAttribute="leading" secondItem="BmC-gM-ibY" secondAttribute="trailing" constant="21" id="s67-1c-VLd"/>
-                            <constraint firstItem="sFj-xX-6ZI" firstAttribute="top" secondItem="sJE-jk-iCs" secondAttribute="top" id="tF9-pd-n9F"/>
-                            <constraint firstItem="nIQ-kt-Qkp" firstAttribute="top" secondItem="BmC-gM-ibY" secondAttribute="bottom" constant="29" id="tf9-ED-yjz"/>
+                            <constraint firstItem="Oal-36-mec" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" id="0uO-NR-nJp"/>
+                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="lqg-RO-WNs" secondAttribute="trailing" constant="16" id="8X5-2g-g3R"/>
+                            <constraint firstItem="Oal-36-mec" firstAttribute="top" secondItem="sJE-jk-iCs" secondAttribute="top" id="F9y-iL-XIG"/>
+                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="wNq-Hx-Xj1" secondAttribute="trailing" constant="16" id="Gwe-mH-T7M"/>
+                            <constraint firstItem="XuI-o8-Q1I" firstAttribute="top" secondItem="wNq-Hx-Xj1" secondAttribute="bottom" id="KZJ-lR-21B"/>
+                            <constraint firstItem="nIQ-kt-Qkp" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="L26-vy-f0a"/>
+                            <constraint firstItem="lqg-RO-WNs" firstAttribute="top" secondItem="XuI-o8-Q1I" secondAttribute="bottom" constant="19" id="LgJ-De-QjC"/>
+                            <constraint firstItem="hjw-vK-tK9" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="NcF-9c-FPz"/>
+                            <constraint firstItem="Oal-36-mec" firstAttribute="trailing" secondItem="sJE-jk-iCs" secondAttribute="trailing" id="UaA-PA-Gc1"/>
+                            <constraint firstItem="nIQ-kt-Qkp" firstAttribute="top" secondItem="BmC-gM-ibY" secondAttribute="bottom" constant="26" id="VCl-Ug-80m"/>
+                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="L8G-oZ-DcT" secondAttribute="trailing" constant="16" id="X3H-g3-uou"/>
+                            <constraint firstItem="L8G-oZ-DcT" firstAttribute="top" secondItem="Oal-36-mec" secondAttribute="bottom" constant="40" id="bCN-FN-FhW"/>
+                            <constraint firstItem="wNq-Hx-Xj1" firstAttribute="leading" secondItem="nIQ-kt-Qkp" secondAttribute="trailing" constant="16" id="bXW-cb-00C"/>
+                            <constraint firstItem="BmC-gM-ibY" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="bup-jP-CXZ"/>
+                            <constraint firstItem="L8G-oZ-DcT" firstAttribute="leading" secondItem="BmC-gM-ibY" secondAttribute="trailing" constant="16" id="dam-h4-cDK"/>
+                            <constraint firstItem="XuI-o8-Q1I" firstAttribute="leading" secondItem="nIQ-kt-Qkp" secondAttribute="trailing" constant="16" id="fkh-34-YjI"/>
+                            <constraint firstItem="wNq-Hx-Xj1" firstAttribute="top" secondItem="L8G-oZ-DcT" secondAttribute="bottom" constant="10" id="gDH-u7-m80"/>
+                            <constraint firstItem="BmC-gM-ibY" firstAttribute="top" secondItem="Oal-36-mec" secondAttribute="bottom" constant="49" id="lzg-uE-dn0"/>
+                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="XuI-o8-Q1I" secondAttribute="trailing" constant="16" id="ocm-IS-W2b"/>
+                            <constraint firstItem="hjw-vK-tK9" firstAttribute="top" secondItem="nIQ-kt-Qkp" secondAttribute="bottom" constant="26" id="uuB-gX-oRx"/>
+                            <constraint firstItem="lqg-RO-WNs" firstAttribute="leading" secondItem="hjw-vK-tK9" secondAttribute="trailing" constant="16" id="zgX-92-o6g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sJE-jk-iCs"/>
                     </view>
@@ -257,12 +235,22 @@ ism@ism.edu.kg</string>
                     <connections>
                         <outlet property="addressLabel" destination="L8G-oZ-DcT" id="3uz-tD-d8X"/>
                         <outlet property="emailLabel" destination="lqg-RO-WNs" id="Djw-jA-K8N"/>
-                        <outlet property="mapView" destination="sFj-xX-6ZI" id="GD3-TG-KOq"/>
+                        <outlet property="mapView" destination="Oal-36-mec" id="aVa-E8-eyU"/>
                         <outlet property="phoneLabel" destination="wNq-Hx-Xj1" id="pcW-2a-UPb"/>
                         <outlet property="phoneLabel2" destination="XuI-o8-Q1I" id="Sii-Xx-tFl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zck-YU-q8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hgE-5z-HzH">
+                    <connections>
+                        <action selector="phoneLabelTapped:" destination="1tj-RL-Ehh" id="v57-IR-tvF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bd4-RS-xsS">
+                    <connections>
+                        <action selector="phoneLabel2Tapped:" destination="1tj-RL-Ehh" id="yl9-HL-vAv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1599.2" y="1353.6945812807883"/>
         </scene>
@@ -334,7 +322,7 @@ ism@ism.edu.kg</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R9y-XA-Ped"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homeBar" id="DgH-Rj-5oM"/>
+                    <tabBarItem key="tabBarItem" title="HOME" image="homeBar" id="DgH-Rj-5oM"/>
                     <navigationItem key="navigationItem" title="HOME" id="MFR-bZ-CxT"/>
                     <connections>
                         <outlet property="collectionView" destination="CQD-9U-sNf" id="xxw-xl-goE"/>
@@ -412,8 +400,8 @@ ism@ism.edu.kg</string>
                     </tabBar>
                     <connections>
                         <segue destination="rML-7J-tK3" kind="relationship" relationship="viewControllers" id="9qv-Wv-YSU"/>
+                        <segue destination="K3b-D7-va6" kind="relationship" relationship="viewControllers" id="rdd-tP-yED"/>
                         <segue destination="ETg-PT-aCr" kind="relationship" relationship="viewControllers" id="3Ah-kt-yOi"/>
-                        <segue destination="oQc-Ja-Up8" kind="relationship" relationship="viewControllers" id="Kfw-Ia-P3B"/>
                         <segue destination="N30-d4-0Vl" kind="relationship" relationship="viewControllers" id="5w1-pG-e60"/>
                     </connections>
                 </tabBarController>
@@ -607,11 +595,11 @@ ism@ism.edu.kg</string>
             </objects>
             <point key="canvasLocation" x="-1676" y="273"/>
         </scene>
-        <!--ABOUT US-->
+        <!--FOLLOW US-->
         <scene sceneID="5i2-Y1-jIA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ETg-PT-aCr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ABOUT US" image="information" id="aaH-Gc-jRh"/>
+                    <tabBarItem key="tabBarItem" title="FOLLOW US" image="information" id="aaH-Gc-jRh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OIg-Tf-h12">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -644,25 +632,6 @@ ism@ism.edu.kg</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWe-Pa-92O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="656.79999999999995" y="1353.6945812807883"/>
-        </scene>
-        <!--ISM-->
-        <scene sceneID="4yx-eH-odo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oQc-Ja-Up8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ISM" image="internet" id="J9x-58-gb7"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NmB-j1-xNu">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="K3b-D7-va6" kind="relationship" relationship="rootViewController" id="p9u-9c-oa3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kpp-uL-dxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="656.79999999999995" y="623.64532019704438"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mu9-EK-dSW">

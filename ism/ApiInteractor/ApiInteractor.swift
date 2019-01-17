@@ -292,4 +292,32 @@ class ApiInteractor: NSObject {
             }
         }
     }
+    
+    public func setLetter(parameters: [String: Any], onSuccess: @escaping(_ onSuccess: String?) -> Void) {
+        
+        let url = "http://ism-app.sunrisetest.site/api/v1/students/letter"
+        
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            for (key, value) in parameters {
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+            }
+            
+        }, usingThreshold: UInt64.init(), to: url, method: .post, headers: nil) { (result) in
+            switch result{
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    print("Succesfully uploaded")
+                    onSuccess("Succesfully uploaded")
+                    if let err = response.error{
+                        onSuccess("\(err.localizedDescription)")
+                        return
+                    }
+                }
+            case .failure(let error):
+                print("Error in upload: \(error.localizedDescription)")
+                onSuccess("\(error.localizedDescription)")
+            }
+        }
+        
+    }
 }
