@@ -89,156 +89,14 @@
         <!--Contact-->
         <scene sceneID="DpV-fV-yeM">
             <objects>
-                <viewController id="1tj-RL-Ehh" customClass="ContactVC" customModule="ism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1tj-RL-Ehh" customClass="MapsVC" customModule="ism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nj1-gJ-pk7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" translatesAutoresizingMaskIntoConstraints="NO" id="BmC-gM-ibY">
-                                <rect key="frame" x="16" y="409" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="U2S-V1-qKi"/>
-                                    <constraint firstAttribute="height" constant="25" id="wbA-dU-xfU"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="nIQ-kt-Qkp">
-                                <rect key="frame" x="16" y="460" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Y2Z-7U-cC1"/>
-                                    <constraint firstAttribute="width" constant="25" id="uvB-sr-1NY"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuI-o8-Q1I">
-                                <rect key="frame" x="57" y="472" width="302" height="21"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Tf9-KM-IVE"/>
-                                </constraints>
-                                <string key="text">Bishkek, Kyrgyzstan 
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bd4-RS-xsS" appends="YES" id="lvh-x5-16b"/>
-                                </connections>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ism@ism.edu.kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-RO-WNs">
-                                <rect key="frame" x="57" y="512" width="302" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="WO2-1b-KoK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="hjw-vK-tK9">
-                                <rect key="frame" x="16" y="511" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="XAU-mL-Rg1"/>
-                                    <constraint firstAttribute="width" constant="25" id="nJH-OE-6UC"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-Hx-Xj1">
-                                <rect key="frame" x="57" y="451" width="302" height="21"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="pZO-4x-Bkm"/>
-                                </constraints>
-                                <string key="text">Bishkek, Kyrgyzstan 
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hgE-5z-HzH" appends="YES" id="LIO-S0-CMc"/>
-                                </connections>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-oZ-DcT">
-                                <rect key="frame" x="57" y="400" width="302" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="WVI-hm-OQt"/>
-                                </constraints>
-                                <string key="text">Bishkek, Kyrgyzstan 
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg
-Bishkek, Kyrgyzstan 1f, str. Intergelpo 720054
-
-+996 312 653673
-+996 312 644402
-
-ism@ism.edu.kg</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Oal-36-mec">
-                                <rect key="frame" x="0.0" y="88" width="375" height="272"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="272" id="btn-FH-uF7"/>
-                                </constraints>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Oal-36-mec" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" id="0uO-NR-nJp"/>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="lqg-RO-WNs" secondAttribute="trailing" constant="16" id="8X5-2g-g3R"/>
-                            <constraint firstItem="Oal-36-mec" firstAttribute="top" secondItem="sJE-jk-iCs" secondAttribute="top" id="F9y-iL-XIG"/>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="wNq-Hx-Xj1" secondAttribute="trailing" constant="16" id="Gwe-mH-T7M"/>
-                            <constraint firstItem="XuI-o8-Q1I" firstAttribute="top" secondItem="wNq-Hx-Xj1" secondAttribute="bottom" id="KZJ-lR-21B"/>
-                            <constraint firstItem="nIQ-kt-Qkp" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="L26-vy-f0a"/>
-                            <constraint firstItem="lqg-RO-WNs" firstAttribute="top" secondItem="XuI-o8-Q1I" secondAttribute="bottom" constant="19" id="LgJ-De-QjC"/>
-                            <constraint firstItem="hjw-vK-tK9" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="NcF-9c-FPz"/>
-                            <constraint firstItem="Oal-36-mec" firstAttribute="trailing" secondItem="sJE-jk-iCs" secondAttribute="trailing" id="UaA-PA-Gc1"/>
-                            <constraint firstItem="nIQ-kt-Qkp" firstAttribute="top" secondItem="BmC-gM-ibY" secondAttribute="bottom" constant="26" id="VCl-Ug-80m"/>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="L8G-oZ-DcT" secondAttribute="trailing" constant="16" id="X3H-g3-uou"/>
-                            <constraint firstItem="L8G-oZ-DcT" firstAttribute="top" secondItem="Oal-36-mec" secondAttribute="bottom" constant="40" id="bCN-FN-FhW"/>
-                            <constraint firstItem="wNq-Hx-Xj1" firstAttribute="leading" secondItem="nIQ-kt-Qkp" secondAttribute="trailing" constant="16" id="bXW-cb-00C"/>
-                            <constraint firstItem="BmC-gM-ibY" firstAttribute="leading" secondItem="sJE-jk-iCs" secondAttribute="leading" constant="16" id="bup-jP-CXZ"/>
-                            <constraint firstItem="L8G-oZ-DcT" firstAttribute="leading" secondItem="BmC-gM-ibY" secondAttribute="trailing" constant="16" id="dam-h4-cDK"/>
-                            <constraint firstItem="XuI-o8-Q1I" firstAttribute="leading" secondItem="nIQ-kt-Qkp" secondAttribute="trailing" constant="16" id="fkh-34-YjI"/>
-                            <constraint firstItem="wNq-Hx-Xj1" firstAttribute="top" secondItem="L8G-oZ-DcT" secondAttribute="bottom" constant="10" id="gDH-u7-m80"/>
-                            <constraint firstItem="BmC-gM-ibY" firstAttribute="top" secondItem="Oal-36-mec" secondAttribute="bottom" constant="49" id="lzg-uE-dn0"/>
-                            <constraint firstItem="sJE-jk-iCs" firstAttribute="trailing" secondItem="XuI-o8-Q1I" secondAttribute="trailing" constant="16" id="ocm-IS-W2b"/>
-                            <constraint firstItem="hjw-vK-tK9" firstAttribute="top" secondItem="nIQ-kt-Qkp" secondAttribute="bottom" constant="26" id="uuB-gX-oRx"/>
-                            <constraint firstItem="lqg-RO-WNs" firstAttribute="leading" secondItem="hjw-vK-tK9" secondAttribute="trailing" constant="16" id="zgX-92-o6g"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sJE-jk-iCs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact" id="IPB-sZ-zBt"/>
-                    <connections>
-                        <outlet property="addressLabel" destination="L8G-oZ-DcT" id="3uz-tD-d8X"/>
-                        <outlet property="emailLabel" destination="lqg-RO-WNs" id="Djw-jA-K8N"/>
-                        <outlet property="mapView" destination="Oal-36-mec" id="aVa-E8-eyU"/>
-                        <outlet property="phoneLabel" destination="wNq-Hx-Xj1" id="pcW-2a-UPb"/>
-                        <outlet property="phoneLabel2" destination="XuI-o8-Q1I" id="Sii-Xx-tFl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zck-YU-q8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="hgE-5z-HzH">
@@ -614,11 +472,11 @@ ism@ism.edu.kg</string>
             </objects>
             <point key="canvasLocation" x="656.79999999999995" y="-65.024630541871929"/>
         </scene>
-        <!--CONTACT-->
+        <!--MAPS-->
         <scene sceneID="afO-LI-j84">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N30-d4-0Vl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="CONTACT" image="call" id="SXY-mg-OlR"/>
+                    <tabBarItem key="tabBarItem" title="MAPS" image="maps" id="SXY-mg-OlR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zRA-8F-AV7">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -744,15 +602,12 @@ ism@ism.edu.kg</string>
         </scene>
     </scenes>
     <resources>
-        <image name="call" width="17" height="17"/>
         <image name="header" width="1440" height="808"/>
         <image name="homeBar" width="20" height="20"/>
-        <image name="house" width="26" height="25"/>
         <image name="information" width="17" height="17"/>
         <image name="internet" width="17" height="17"/>
         <image name="library" width="56" height="56"/>
         <image name="logo" width="123" height="100"/>
-        <image name="mail" width="24" height="17"/>
-        <image name="phone" width="23" height="23"/>
+        <image name="maps" width="24" height="24"/>
     </resources>
 </document>

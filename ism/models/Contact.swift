@@ -12,6 +12,7 @@ import ObjectMapper
 class Contact: Mappable {
     
     var id = 0
+    var name = ""
     var latitude = 0.0
     var longitude = 0.0
     var address = ""
@@ -24,6 +25,7 @@ class Contact: Mappable {
     
     func mapping(map: Map) {
         id <- map["id"]
+        name <- map["name"]
         latitude <- map["latitude"]
         longitude <- map["longitude"]
         address <- map["address"]

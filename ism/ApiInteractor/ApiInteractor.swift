@@ -164,7 +164,6 @@ class ApiInteractor: NSObject {
         }
     }
     
-    
     public func getContact(success:@escaping(_ items:[Contact]?, String?) -> Void) {
         let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/contacts")
         let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
