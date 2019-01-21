@@ -69,6 +69,7 @@ class MapsCVCell: UICollectionViewCell {
         self.contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
         
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -82,16 +83,24 @@ class MapsCVCell: UICollectionViewCell {
         
         let tap2 = UITapGestureRecognizer(target: self, action: #selector(additionalPhoneCall))
         additionalPhoneLabel.isUserInteractionEnabled = true
-        additionalPhoneLabel.addGestureRecognizer(tap)
+        additionalPhoneLabel.addGestureRecognizer(tap2)
     }
     
     @objc func phoneCall() {
-        guard let number = URL(string: "tel://" + (item?.phone_number)!) else {return}
+        let withoutSpaces = phoneLabel.text?.replacingOccurrences(of: " ", with: "")
+        guard let number = URL(string: "tel://\(withoutSpaces!)") else {
+            return
+            
+        }
         UIApplication.shared.open(number)
     }
     
     @objc func additionalPhoneCall() {
-        guard let number = URL(string: "tel://" + (item?.additional_phone_number1)!) else {return}
+        let withoutSpaces = additionalPhoneLabel.text?.replacingOccurrences(of: " ", with: "")
+        guard let number = URL(string: "tel://\(withoutSpaces!)") else {
+            return
+            
+            }
         UIApplication.shared.open(number)
     }
     
@@ -103,11 +112,11 @@ class MapsCVCell: UICollectionViewCell {
         constrain(phoneImageView, phoneLabel, additionalPhoneLabel) { phoneImageView, phoneLabel, additionalPhoneLabel in
             
             phoneImageView.top == phoneImageView.superview!.top + 82
-            phoneImageView.left == phoneImageView.superview!.left
+            phoneImageView.left == phoneImageView.superview!.left + 16
             phoneImageView.height == 25
             phoneImageView.width == 25
             
-            phoneLabel.top == phoneImageView.superview!.top
+            phoneLabel.top == phoneImageView.top
             phoneLabel.left == phoneImageView.right + 16
             phoneLabel.right == phoneLabel.superview!.right - 16
             phoneLabel.height == 12
@@ -118,6 +127,8 @@ class MapsCVCell: UICollectionViewCell {
             additionalPhoneLabel.height == 12
             
         }
+        
+        addTapGestureRecognizers()
     }
     
     func constrainMail() {

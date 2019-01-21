@@ -130,6 +130,7 @@ class MapsVC: UIViewController, Reloadable, UICollectionViewDelegateFlowLayout, 
         let center = CLLocationCoordinate2D(latitude: self.items[indexPath.item].latitude, longitude: self.items[indexPath.item].longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
         self.mapView.setRegion(region, animated: true)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
