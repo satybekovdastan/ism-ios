@@ -52,6 +52,7 @@ class ScheduleVC: UIViewController, Reloadable {
         self.getGroups()
         self.getSemesters()
         self.setupNavBar()
+        navigationItem.title = "ISM"
         
     }
     

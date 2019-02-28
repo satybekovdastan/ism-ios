@@ -20,7 +20,7 @@ class EventsDetailTVC: UITableViewController {
             self.tableView.tableFooterView = UIView(frame: .zero)
             self.labelTitle.text = event!.title
             self.dateLabel.text = event!.date
-            self.labelDesc.text = event!.description.htmlToString
+            self.labelDesc.attributedText = try! NSAttributedString(data: event!.description.data(using: String.Encoding.utf8, allowLossyConversion: true)!, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html], documentAttributes: nil)
             self.imageView.sd_setImage(with: URL.init(string: event!.image), completed: nil)
             tableView.reloadData()
         }

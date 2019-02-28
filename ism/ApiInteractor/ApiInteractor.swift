@@ -305,8 +305,7 @@ class ApiInteractor: NSObject {
             switch result{
             case .success(let upload, _, _):
                 upload.responseJSON { response in
-                    print("Succesfully uploaded")
-                    onSuccess("Succesfully uploaded")
+                    onSuccess("Succesfully submitted")
                     if let err = response.error{
                         onSuccess("\(err.localizedDescription)")
                         return
@@ -319,4 +318,122 @@ class ApiInteractor: NSObject {
         }
         
     }
+    
+    public func getCampuses(success: @escaping(_ items:[NewCampus]?, String?) -> Void) {
+        
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/campuses")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[NewCampus]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+            
+        }
+        
+    }
+    
+    public func getContacts(success: @escaping(_ items:[ContactCampus]?, String?) -> Void) {
+        
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/contacts")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[ContactCampus]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+            
+        }
+        
+    }
+    
+    public func getContact(withId: Int, success: @escaping(_ items:[ContactCampus]?, String?) -> Void) {
+        
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/contacts?id=\(withId)")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[ContactCampus]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+            
+        }
+        
+    }
+    
+    public func getAboutUs(success: @escaping(_ items:[AboutUs]?, String?) -> Void) {
+        
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/about")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[AboutUs]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+            
+        }
+        
+    }
+    
+    public func getCouncil(success: @escaping(_ items:[Council]?, String?) -> Void) {
+        
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/page/ism_student_council")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Council]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+            
+        }
+        
+    }
+    
+    public func getManual(success: @escaping(_ items:[Manual]?, String?) -> Void) {
+        
+        let url = String(format: "http://ism-app.sunrisetest.site/api/v1/core/manual/")
+        let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        
+        Alamofire.request(encodedString!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Manual]>) in
+            switch response.result {
+            case .success(let response):
+                success(response, nil)
+            case .failure:
+                self.connectCheck(result: { (message) in
+                    success(nil, message)
+                })
+            }
+            
+        }
+        
+    }
+    
+    
+    
+    
 }

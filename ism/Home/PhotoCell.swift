@@ -44,8 +44,8 @@ class PhotoCell: UICollectionViewCell {
         constrain(logoImageView) { logoImageView in
             logoImageView.centerX == logoImageView.superview!.centerX
             logoImageView.centerY == logoImageView.superview!.centerY - 30
-            logoImageView.height == 70
-            logoImageView.width == 70
+            logoImageView.height == 115
+            logoImageView.width == 140
         }
     }
     

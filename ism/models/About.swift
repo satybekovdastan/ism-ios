@@ -22,6 +22,5 @@ class About: Mappable {
         youtube_video_id <- map["youtube_video_id"]
         text <- map["text"]
     }
-    
 
 }

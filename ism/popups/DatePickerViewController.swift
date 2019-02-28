@@ -26,7 +26,7 @@ class DatePickerViewController: UIViewController {
             if isYearOfCompletion != nil {
                 formatter.dateFormat = "YYYY"
             } else {
-                formatter.dateFormat = "YYYY-MM-DD"
+                formatter.dateFormat = "YYYY-MM-dd"
             }
             return formatter.string(from: datePicker.date)
         }

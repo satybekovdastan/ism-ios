@@ -16,13 +16,12 @@ class PassportVC: UIViewController, Reloadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("It's me!")
         scrollView.bottomAnchor.constraint(equalTo: label.bottomAnchor).isActive = true
         self.getPassportAndVisa()
         self.setupNavBar()
     }
     
-
     func getPassportAndVisa() {
         self.view.makeToastActivity(.center)
         ApiInteractor.shared.getPassportVisa{ (response, errorString) in
@@ -31,7 +30,7 @@ class PassportVC: UIViewController, Reloadable {
                 if let data = response {
                     var items = [Passport]()
                     items = data;
-                    self.label.text = items[0].passport_and_visa_procedure.htmlToString
+                    self.label.attributedText = try! NSAttributedString(data: items[0].passport_and_visa_procedure.data(using: String.Encoding.utf8, allowLossyConversion: true)!, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html], documentAttributes: nil)
                 }
             } else {
                 self.internetErrorAlert(message: errorString, reloadable: self)

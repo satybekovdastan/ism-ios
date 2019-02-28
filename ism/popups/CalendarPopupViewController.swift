@@ -106,4 +106,6 @@ extension CalendarPopupViewController: KoyomiDelegate {
 
 extension Notification.Name {
     static let saveDate = Notification.Name("saveDate")
+    static let letterChecked = Notification.Name("letterChecked")
+    static let letterUnchecked = Notification.Name("letterUnchecked")
 }

@@ -35,8 +35,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cellHome = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)as! CollectionViewCell
         
         cellHome.label.text = titles[indexPath.item]
-//        cellHome.imageView.image = images[indexPath.item]
-        print("ITEM (asd)")
+        cellHome.imageView.image = images[indexPath.item]
         return cellHome
     }
 

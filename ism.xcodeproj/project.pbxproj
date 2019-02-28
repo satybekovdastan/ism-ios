@@ -14,7 +14,6 @@
 		2312A4A0218708680003D07B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312A49F218708680003D07B /* CollectionViewCell.swift */; };
 		2312A4A42187174E0003D07B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312A4A32187174E0003D07B /* HomeVC.swift */; };
 		2312A4B1218862FD0003D07B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312A4B0218862FD0003D07B /* Home.swift */; };
-		2312A4B321886F830003D07B /* ApplicantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312A4B221886F830003D07B /* ApplicantVC.swift */; };
 		2312A4B62188730C0003D07B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312A4B52188730C0003D07B /* RegistrationViewController.swift */; };
 		2316684521A7C94F00DDA5F4 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316684421A7C94F00DDA5F4 /* Extentions.swift */; };
 		2316684821A7EB5800DDA5F4 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316684721A7EB5800DDA5F4 /* Student.swift */; };
@@ -24,7 +23,6 @@
 		233A97C521C21AF90064E681 /* EventsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A97C421C21AF90064E681 /* EventsCVCell.swift */; };
 		233A97C721C23B460064E681 /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A97C621C23B460064E681 /* EventsTVC.swift */; };
 		233A97C921C259120064E681 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A97C821C259120064E681 /* About.swift */; };
-		233A97CB21C25DFD0064E681 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A97CA21C25DFD0064E681 /* Contact.swift */; };
 		236BA74621ABB846005D5C4C /* TaxiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA74521ABB846005D5C4C /* TaxiVC.swift */; };
 		236BA74821ABB858005D5C4C /* TaxiTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA74721ABB858005D5C4C /* TaxiTVCell.swift */; };
 		236BA74A21AD0D91005D5C4C /* IsmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BA74921AD0D91005D5C4C /* IsmViewController.swift */; };
@@ -34,8 +32,6 @@
 		23976152217D8E35005614C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23976150217D8E35005614C3 /* LaunchScreen.storyboard */; };
 		2397615D217D8E35005614C3 /* ismTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397615C217D8E35005614C3 /* ismTests.swift */; };
 		23976168217D8E35005614C3 /* ismUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23976167217D8E35005614C3 /* ismUITests.swift */; };
-		23A2C95421C782B30022D2DA /* ContactsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C95321C782B30022D2DA /* ContactsTVCell.swift */; };
-		23A2C95C21C788BD0022D2DA /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C95B21C788BD0022D2DA /* ContactsVC.swift */; };
 		23A2C95E21C79C180022D2DA /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C95D21C79C180022D2DA /* Passport.swift */; };
 		23A2C96021C79C660022D2DA /* PassportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C95F21C79C660022D2DA /* PassportVC.swift */; };
 		23A2C96221C7AAD30022D2DA /* IsmStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2C96121C7AAD30022D2DA /* IsmStudentVC.swift */; };
@@ -65,7 +61,6 @@
 		6E0F8C0E21CF8D3400B2C191 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F8C0D21CF8D3400B2C191 /* UIColorExtension.swift */; };
 		6E0F8C1121CFFB0800B2C191 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F8C1021CFFB0800B2C191 /* DatePickerViewController.swift */; };
 		6E0F8C1321CFFB1F00B2C191 /* DatePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F8C1221CFFB1F00B2C191 /* DatePickerViewController.storyboard */; };
-		6E0F8C1521D0100400B2C191 /* ApplicantVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F8C1421D0100400B2C191 /* ApplicantVC.storyboard */; };
 		6E13242A21D4FDF200AAC185 /* UIViewControllerNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E13242921D4FDF200AAC185 /* UIViewControllerNavBar.swift */; };
 		6E13242D21D502B700AAC185 /* PassportVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E13242C21D502B700AAC185 /* PassportVC.storyboard */; };
 		6E13243021D5043900AAC185 /* IsmStudentVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E13242F21D5043900AAC185 /* IsmStudentVC.storyboard */; };
@@ -73,15 +68,44 @@
 		6E13243621D56A4F00AAC185 /* TicketVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E13243521D56A4F00AAC185 /* TicketVC.storyboard */; };
 		6E13243821D56BFE00AAC185 /* TaxiVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E13243721D56BFE00AAC185 /* TaxiVC.storyboard */; };
 		6E218981852536ED4FB71E06 /* Pods_ism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305A5446B007425E29ACAC43 /* Pods_ism.framework */; };
+		6E264494221ED8CE00A2487B /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E264493221ED8CE00A2487B /* LetterCell.swift */; };
+		6E2E7BE52226F387004A2028 /* PassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E7BE42226F387004A2028 /* PassportViewController.swift */; };
 		6E34714A21E083CF007BCAD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34714921E083CF007BCAD1 /* MainViewController.swift */; };
-		6EA123E221D4D86000C11FC9 /* ContactsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA123E121D4D86000C11FC9 /* ContactsVC.storyboard */; };
+		6EA4A98F221D8F020055C53E /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4A98E221D8F020055C53E /* ContactsVC.swift */; };
+		6EA4A991221D8F380055C53E /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4A990221D8F380055C53E /* ContactsCell.swift */; };
+		6EA4A993221D92220055C53E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA4A992221D92220055C53E /* Roboto-Regular.ttf */; };
+		6EA4A995221D95EB0055C53E /* ContactCampus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4A994221D95EB0055C53E /* ContactCampus.swift */; };
+		6EA9014E22130A19004A73B6 /* FooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9014D22130A19004A73B6 /* FooterCell.swift */; };
+		6EA9351A22257368006F2041 /* MapsDetailDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9351922257368006F2041 /* MapsDetailDescriptionCell.swift */; };
+		6EA9351C22257D33006F2041 /* MapsDetailTaxiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9351B22257D33006F2041 /* MapsDetailTaxiCell.swift */; };
+		6EA9351E22258950006F2041 /* MapsDetailAirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9351D22258950006F2041 /* MapsDetailAirCell.swift */; };
+		6EA935232225ABD7006F2041 /* CouncilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA935222225ABD7006F2041 /* CouncilVC.swift */; };
+		6EA935252225AD07006F2041 /* Council.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA935242225AD07006F2041 /* Council.swift */; };
+		6EA935272225AEFB006F2041 /* CouncilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA935262225AEFB006F2041 /* CouncilCell.swift */; };
+		6EA9398C2212F65200080F3C /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA9398B2212F65200080F3C /* Roboto-Medium.ttf */; };
+		6EA9398E2212F6B400080F3C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9398D2212F6B400080F3C /* Constants.swift */; };
 		6EA964FB21D7621600581E60 /* EventsDetailVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA964FA21D7621600581E60 /* EventsDetailVC.storyboard */; };
 		6EA964FD21D7646B00581E60 /* EventsDetailTVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA964FC21D7646B00581E60 /* EventsDetailTVC.storyboard */; };
 		6EAD53B421D23AD60071118C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD53B321D23AD60071118C /* Group.swift */; };
 		6EAD53B621D243460071118C /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD53B521D243460071118C /* Semester.swift */; };
 		6EAD53B821D25A1B0071118C /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD53B721D25A1B0071118C /* Schedule.swift */; };
 		6EAD53BA21D262D30071118C /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD53B921D262D30071118C /* Subject.swift */; };
+		6EADBE1F222795E8007AA747 /* Manual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADBE1E222795E8007AA747 /* Manual.swift */; };
+		6EADBE212227A6A9007AA747 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADBE202227A6A9007AA747 /* PDFViewController.swift */; };
+		6EADBE242227BF18007AA747 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADBE232227BF18007AA747 /* Map.swift */; };
+		6EBDC3C8221FD5C900A5B163 /* AcademicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC3C7221FD5C900A5B163 /* AcademicsVC.swift */; };
+		6EBDC3CA221FD84700A5B163 /* AcademicsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC3C9221FD84700A5B163 /* AcademicsHeaderCell.swift */; };
+		6EBDC3CC221FD85300A5B163 /* AcademicsBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC3CB221FD85300A5B163 /* AcademicsBodyCell.swift */; };
+		6EBDC3CE221FE64F00A5B163 /* Academics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC3CD221FE64F00A5B163 /* Academics.swift */; };
+		6EBDC3D322202F6200A5B163 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC3D222202F6200A5B163 /* Maps.swift */; };
+		6EBDC3D52220309400A5B163 /* CampusesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC3D42220309400A5B163 /* CampusesCell.swift */; };
+		6EBDC3D9222032E600A5B163 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDC3D8222032E600A5B163 /* AboutUs.swift */; };
 		6ECB0BA721DF69260034C5D3 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECB0BA621DF69260034C5D3 /* PhotoCell.swift */; };
+		6ECF7EBC2225340A00CF62EF /* MapsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF7EBB2225340A00CF62EF /* MapsDetailVC.swift */; };
+		6ECF7EBE222537D600CF62EF /* MapsDetailContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF7EBD222537D600CF62EF /* MapsDetailContactsCell.swift */; };
+		6ED24ED52202F04100BDCD82 /* NewMapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED24ED42202F04100BDCD82 /* NewMapsVC.swift */; };
+		6ED24ED72202F5E900BDCD82 /* NewCampus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED24ED62202F5E900BDCD82 /* NewCampus.swift */; };
+		6ED24ED922031DAA00BDCD82 /* CampusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED24ED822031DAA00BDCD82 /* CampusDetail.swift */; };
 		6ED5B60321F06CE700E72AD1 /* MapsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5B60221F06CE700E72AD1 /* MapsCVCell.swift */; };
 		6ED5B60921F0BBA100E72AD1 /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5B60821F0BBA100E72AD1 /* CustomPin.swift */; };
 		6ED9AED721CE4F4B00A86781 /* CalendarPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9AED621CE4F4B00A86781 /* CalendarPopupViewController.swift */; };
@@ -89,12 +113,17 @@
 		6EDB8AC621D0965800DD5DC9 /* ScheduleVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EDB8AC521D0965800DD5DC9 /* ScheduleVC.storyboard */; };
 		6EDB8AC821D09A6E00DD5DC9 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDB8AC721D09A6E00DD5DC9 /* ScheduleVC.swift */; };
 		6EE4E39D21D4AD8900F6C3EB /* LibraryVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE4E39C21D4AD8900F6C3EB /* LibraryVC.storyboard */; };
+		6EE8428A22213B16007FA3D4 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE8428922213B16007FA3D4 /* NewsVC.swift */; };
+		6EE8428C22213FCF007FA3D4 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE8428B22213FCF007FA3D4 /* NewsCell.swift */; };
 		6EE87CD021D0CA9E00A3E353 /* ScheduleCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87CCF21D0CA9E00A3E353 /* ScheduleCV.swift */; };
 		6EE87CD221D0CBF900A3E353 /* ScheduleCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87CD121D0CBF900A3E353 /* ScheduleCVCell.swift */; };
 		6EE87CD621D0CE2400A3E353 /* ScheduleCV.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE87CD521D0CE2400A3E353 /* ScheduleCV.storyboard */; };
 		6EE87CD821D0CFF700A3E353 /* ScheduleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87CD721D0CFF700A3E353 /* ScheduleTVCell.swift */; };
-		6EFE1AA421E78B99008C59AC /* LetterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE1AA321E78B99008C59AC /* LetterVC.swift */; };
-		6EFE1AA621E78BB6008C59AC /* LetterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EFE1AA521E78BB6008C59AC /* LetterVC.storyboard */; };
+		6EEA646A2204136D0045691A /* MapWindowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA64692204136D0045691A /* MapWindowVC.swift */; };
+		6EFB3EF6221E84DC00DFC536 /* CampusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB3EF5221E84DC00DFC536 /* CampusPage.swift */; };
+		6EFB3EF8221E873700DFC536 /* CampusBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB3EF7221E873700DFC536 /* CampusBodyCell.swift */; };
+		6EFB3EFA221E8AD200DFC536 /* CampusHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB3EF9221E8AD200DFC536 /* CampusHeaderCell.swift */; };
+		6EFB3F01221EB28800DFC536 /* ApplicantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB3F00221EB28800DFC536 /* ApplicantVC.swift */; };
 		6EFE1AA821E7A902008C59AC /* UIViewControllerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE1AA721E7A902008C59AC /* UIViewControllerTextField.swift */; };
 		B6F701FDC8A6A4307D47FBF9 /* Pods_ismUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F09C8C21B68C4E001EF51C /* Pods_ismUITests.framework */; };
 		CB08B8CFE7081A7830C0059A /* Pods_ismTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD982DC944684CE72D340E /* Pods_ismTests.framework */; };
@@ -123,7 +152,6 @@
 		2312A49F218708680003D07B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2312A4A32187174E0003D07B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2312A4B0218862FD0003D07B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		2312A4B221886F830003D07B /* ApplicantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApplicantVC.swift; path = ../Student/ApplicantVC.swift; sourceTree = "<group>"; };
 		2312A4B52188730C0003D07B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2316684421A7C94F00DDA5F4 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		2316684721A7EB5800DDA5F4 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -133,7 +161,6 @@
 		233A97C421C21AF90064E681 /* EventsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCVCell.swift; sourceTree = "<group>"; };
 		233A97C621C23B460064E681 /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
 		233A97C821C259120064E681 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		233A97CA21C25DFD0064E681 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		236BA74521ABB846005D5C4C /* TaxiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiVC.swift; sourceTree = "<group>"; };
 		236BA74721ABB858005D5C4C /* TaxiTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiTVCell.swift; sourceTree = "<group>"; };
 		236BA74921AD0D91005D5C4C /* IsmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsmViewController.swift; sourceTree = "<group>"; };
@@ -149,8 +176,6 @@
 		23976163217D8E35005614C3 /* ismUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ismUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23976167217D8E35005614C3 /* ismUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ismUITests.swift; sourceTree = "<group>"; };
 		23976169217D8E35005614C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23A2C95321C782B30022D2DA /* ContactsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTVCell.swift; sourceTree = "<group>"; };
-		23A2C95B21C788BD0022D2DA /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
 		23A2C95D21C79C180022D2DA /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
 		23A2C95F21C79C660022D2DA /* PassportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportVC.swift; sourceTree = "<group>"; };
 		23A2C96121C7AAD30022D2DA /* IsmStudentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsmStudentVC.swift; sourceTree = "<group>"; };
@@ -189,22 +214,50 @@
 		6E0F8C0D21CF8D3400B2C191 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		6E0F8C1021CFFB0800B2C191 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		6E0F8C1221CFFB1F00B2C191 /* DatePickerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePickerViewController.storyboard; sourceTree = "<group>"; };
-		6E0F8C1421D0100400B2C191 /* ApplicantVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ApplicantVC.storyboard; sourceTree = "<group>"; };
 		6E13242921D4FDF200AAC185 /* UIViewControllerNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerNavBar.swift; sourceTree = "<group>"; };
 		6E13242C21D502B700AAC185 /* PassportVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PassportVC.storyboard; sourceTree = "<group>"; };
 		6E13242F21D5043900AAC185 /* IsmStudentVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IsmStudentVC.storyboard; sourceTree = "<group>"; };
 		6E13243321D54B4B00AAC185 /* VideoVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoVC.storyboard; sourceTree = "<group>"; };
 		6E13243521D56A4F00AAC185 /* TicketVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TicketVC.storyboard; sourceTree = "<group>"; };
 		6E13243721D56BFE00AAC185 /* TaxiVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaxiVC.storyboard; sourceTree = "<group>"; };
+		6E264493221ED8CE00A2487B /* LetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCell.swift; sourceTree = "<group>"; };
+		6E2E7BE42226F387004A2028 /* PassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportViewController.swift; sourceTree = "<group>"; };
 		6E34714921E083CF007BCAD1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		6EA123E121D4D86000C11FC9 /* ContactsVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactsVC.storyboard; sourceTree = "<group>"; };
+		6EA4A98E221D8F020055C53E /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		6EA4A990221D8F380055C53E /* ContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
+		6EA4A992221D92220055C53E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		6EA4A994221D95EB0055C53E /* ContactCampus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCampus.swift; sourceTree = "<group>"; };
+		6EA9014D22130A19004A73B6 /* FooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCell.swift; sourceTree = "<group>"; };
+		6EA9351922257368006F2041 /* MapsDetailDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsDetailDescriptionCell.swift; sourceTree = "<group>"; };
+		6EA9351B22257D33006F2041 /* MapsDetailTaxiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsDetailTaxiCell.swift; sourceTree = "<group>"; };
+		6EA9351D22258950006F2041 /* MapsDetailAirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsDetailAirCell.swift; sourceTree = "<group>"; };
+		6EA935222225ABD7006F2041 /* CouncilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouncilVC.swift; sourceTree = "<group>"; };
+		6EA935242225AD07006F2041 /* Council.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Council.swift; sourceTree = "<group>"; };
+		6EA935262225AEFB006F2041 /* CouncilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouncilCell.swift; sourceTree = "<group>"; };
+		6EA9398B2212F65200080F3C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		6EA9398D2212F6B400080F3C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6EA964FA21D7621600581E60 /* EventsDetailVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventsDetailVC.storyboard; sourceTree = "<group>"; };
 		6EA964FC21D7646B00581E60 /* EventsDetailTVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventsDetailTVC.storyboard; sourceTree = "<group>"; };
 		6EAD53B321D23AD60071118C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		6EAD53B521D243460071118C /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		6EAD53B721D25A1B0071118C /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		6EAD53B921D262D30071118C /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		6EADBE1E222795E8007AA747 /* Manual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manual.swift; sourceTree = "<group>"; };
+		6EADBE202227A6A9007AA747 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		6EADBE232227BF18007AA747 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		6EBDC3C7221FD5C900A5B163 /* AcademicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicsVC.swift; sourceTree = "<group>"; };
+		6EBDC3C9221FD84700A5B163 /* AcademicsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicsHeaderCell.swift; sourceTree = "<group>"; };
+		6EBDC3CB221FD85300A5B163 /* AcademicsBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicsBodyCell.swift; sourceTree = "<group>"; };
+		6EBDC3CD221FE64F00A5B163 /* Academics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Academics.swift; sourceTree = "<group>"; };
+		6EBDC3D222202F6200A5B163 /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		6EBDC3D42220309400A5B163 /* CampusesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusesCell.swift; sourceTree = "<group>"; };
+		6EBDC3D8222032E600A5B163 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 		6ECB0BA621DF69260034C5D3 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		6ECF7EBB2225340A00CF62EF /* MapsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsDetailVC.swift; sourceTree = "<group>"; };
+		6ECF7EBD222537D600CF62EF /* MapsDetailContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsDetailContactsCell.swift; sourceTree = "<group>"; };
+		6ED24ED42202F04100BDCD82 /* NewMapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMapsVC.swift; sourceTree = "<group>"; };
+		6ED24ED62202F5E900BDCD82 /* NewCampus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCampus.swift; sourceTree = "<group>"; };
+		6ED24ED822031DAA00BDCD82 /* CampusDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusDetail.swift; sourceTree = "<group>"; };
 		6ED5B60221F06CE700E72AD1 /* MapsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsCVCell.swift; sourceTree = "<group>"; };
 		6ED5B60821F0BBA100E72AD1 /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		6ED9AED621CE4F4B00A86781 /* CalendarPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPopupViewController.swift; sourceTree = "<group>"; };
@@ -212,12 +265,17 @@
 		6EDB8AC521D0965800DD5DC9 /* ScheduleVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleVC.storyboard; sourceTree = "<group>"; };
 		6EDB8AC721D09A6E00DD5DC9 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		6EE4E39C21D4AD8900F6C3EB /* LibraryVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LibraryVC.storyboard; sourceTree = "<group>"; };
+		6EE8428922213B16007FA3D4 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		6EE8428B22213FCF007FA3D4 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		6EE87CCF21D0CA9E00A3E353 /* ScheduleCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCV.swift; sourceTree = "<group>"; };
 		6EE87CD121D0CBF900A3E353 /* ScheduleCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCVCell.swift; sourceTree = "<group>"; };
 		6EE87CD521D0CE2400A3E353 /* ScheduleCV.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScheduleCV.storyboard; sourceTree = "<group>"; };
 		6EE87CD721D0CFF700A3E353 /* ScheduleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTVCell.swift; sourceTree = "<group>"; };
-		6EFE1AA321E78B99008C59AC /* LetterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterVC.swift; sourceTree = "<group>"; };
-		6EFE1AA521E78BB6008C59AC /* LetterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LetterVC.storyboard; sourceTree = "<group>"; };
+		6EEA64692204136D0045691A /* MapWindowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWindowVC.swift; sourceTree = "<group>"; };
+		6EFB3EF5221E84DC00DFC536 /* CampusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusPage.swift; sourceTree = "<group>"; };
+		6EFB3EF7221E873700DFC536 /* CampusBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusBodyCell.swift; sourceTree = "<group>"; };
+		6EFB3EF9221E8AD200DFC536 /* CampusHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusHeaderCell.swift; sourceTree = "<group>"; };
+		6EFB3F00221EB28800DFC536 /* ApplicantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantVC.swift; sourceTree = "<group>"; };
 		6EFE1AA721E7A902008C59AC /* UIViewControllerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerTextField.swift; sourceTree = "<group>"; };
 		9C7ADD3D872C39DD52823C23 /* Pods-ism.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ism.release.xcconfig"; path = "Pods/Target Support Files/Pods-ism/Pods-ism.release.xcconfig"; sourceTree = "<group>"; };
 		AA1F79793642C3B10F06CDCA /* Pods_ismUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ismUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,8 +330,10 @@
 				2312A49D21831ACF0003D07B /* AboutPageViewController.swift */,
 				2312A49F218708680003D07B /* CollectionViewCell.swift */,
 				2312A4A32187174E0003D07B /* HomeVC.swift */,
+				6EADBE202227A6A9007AA747 /* PDFViewController.swift */,
 				236BA74921AD0D91005D5C4C /* IsmViewController.swift */,
 				6ECB0BA621DF69260034C5D3 /* PhotoCell.swift */,
+				6EA9014D22130A19004A73B6 /* FooterCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -334,6 +394,15 @@
 		23976146217D8E34005614C3 /* ism */ = {
 			isa = PBXGroup;
 			children = (
+				6E2E7BE12226EF95004A2028 /* PassportAndVisa */,
+				6EA9351F2225ABBC006F2041 /* Council */,
+				6EE8428822213B06007FA3D4 /* News */,
+				6EBDC3CF22202E8900A5B163 /* Maps */,
+				6EBDC3C6221FD5B700A5B163 /* Academics */,
+				6EFB3EFF221EB23A00DFC536 /* Applicant */,
+				6EA9398A2212F62F00080F3C /* Fonts */,
+				6EA4A98D221D8EF20055C53E /* ContactsVC */,
+				6ED24ED32202F02C00BDCD82 /* NewMapsVC */,
 				6E9D0DB421D780010058A583 /* launchScreen */,
 				6E13242E21D503D800AAC185 /* IsmStudentVC */,
 				6E13242B21D5003F00AAC185 /* PassportVC */,
@@ -341,8 +410,6 @@
 				6E0F8C0C21CF8D1100B2C191 /* Extensions */,
 				6ED9AED521CE4F2A00A86781 /* popups */,
 				23A2C96B21C900C30022D2DA /* VideoVC */,
-				23A2C95A21C7875A0022D2DA /* ContactsVC */,
-				23A2C95021C3711B0022D2DA /* ApplicantVC */,
 				233A97BF21C2188F0064E681 /* EventsVC */,
 				236BA74421ABB823005D5C4C /* Taxi */,
 				23FFEBDB21A6C36F00216B71 /* LibraryVC */,
@@ -377,28 +444,6 @@
 				23976169217D8E35005614C3 /* Info.plist */,
 			);
 			path = ismUITests;
-			sourceTree = "<group>";
-		};
-		23A2C95021C3711B0022D2DA /* ApplicantVC */ = {
-			isa = PBXGroup;
-			children = (
-				6E0F8C1421D0100400B2C191 /* ApplicantVC.storyboard */,
-				2312A4B221886F830003D07B /* ApplicantVC.swift */,
-				6EFE1AA321E78B99008C59AC /* LetterVC.swift */,
-				6EFE1AA521E78BB6008C59AC /* LetterVC.storyboard */,
-			);
-			path = ApplicantVC;
-			sourceTree = "<group>";
-		};
-		23A2C95A21C7875A0022D2DA /* ContactsVC */ = {
-			isa = PBXGroup;
-			children = (
-				6EA123E121D4D86000C11FC9 /* ContactsVC.storyboard */,
-				23A2C95321C782B30022D2DA /* ContactsTVCell.swift */,
-				23A2C95B21C788BD0022D2DA /* ContactsVC.swift */,
-			);
-			name = ContactsVC;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		23A2C96B21C900C30022D2DA /* VideoVC */ = {
@@ -448,13 +493,18 @@
 				2316684721A7EB5800DDA5F4 /* Student.swift */,
 				233A97C221C219110064E681 /* Event.swift */,
 				233A97C821C259120064E681 /* About.swift */,
-				233A97CA21C25DFD0064E681 /* Contact.swift */,
 				23A2C95D21C79C180022D2DA /* Passport.swift */,
 				23A2C96921C900860022D2DA /* Video.swift */,
 				6EAD53B521D243460071118C /* Semester.swift */,
 				6EAD53B721D25A1B0071118C /* Schedule.swift */,
 				6EAD53B321D23AD60071118C /* Group.swift */,
 				6EAD53B921D262D30071118C /* Subject.swift */,
+				6ED24ED62202F5E900BDCD82 /* NewCampus.swift */,
+				6EA4A994221D95EB0055C53E /* ContactCampus.swift */,
+				6EBDC3CD221FE64F00A5B163 /* Academics.swift */,
+				6EBDC3D8222032E600A5B163 /* AboutUs.swift */,
+				6EA935242225AD07006F2041 /* Council.swift */,
+				6EADBE1E222795E8007AA747 /* Manual.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -520,6 +570,14 @@
 			path = IsmStudentVC;
 			sourceTree = "<group>";
 		};
+		6E2E7BE12226EF95004A2028 /* PassportAndVisa */ = {
+			isa = PBXGroup;
+			children = (
+				6E2E7BE42226F387004A2028 /* PassportViewController.swift */,
+			);
+			path = PassportAndVisa;
+			sourceTree = "<group>";
+		};
 		6E9D0DB421D780010058A583 /* launchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,12 +586,92 @@
 			path = launchScreen;
 			sourceTree = "<group>";
 		};
+		6EA4A98D221D8EF20055C53E /* ContactsVC */ = {
+			isa = PBXGroup;
+			children = (
+				6EFB3EF4221E83EF00DFC536 /* CampusPage */,
+				6EA4A98E221D8F020055C53E /* ContactsVC.swift */,
+				6EA4A990221D8F380055C53E /* ContactsCell.swift */,
+			);
+			path = ContactsVC;
+			sourceTree = "<group>";
+		};
+		6EA9351F2225ABBC006F2041 /* Council */ = {
+			isa = PBXGroup;
+			children = (
+				6EA935222225ABD7006F2041 /* CouncilVC.swift */,
+				6EA935262225AEFB006F2041 /* CouncilCell.swift */,
+			);
+			path = Council;
+			sourceTree = "<group>";
+		};
+		6EA9398A2212F62F00080F3C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6EA4A992221D92220055C53E /* Roboto-Regular.ttf */,
+				6EA9398B2212F65200080F3C /* Roboto-Medium.ttf */,
+				6EA9398D2212F6B400080F3C /* Constants.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6EADBE222227BF04007AA747 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6ED5B60821F0BBA100E72AD1 /* CustomPin.swift */,
+				6EADBE232227BF18007AA747 /* Map.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		6EBDC3C6221FD5B700A5B163 /* Academics */ = {
+			isa = PBXGroup;
+			children = (
+				6EBDC3C7221FD5C900A5B163 /* AcademicsVC.swift */,
+				6EBDC3C9221FD84700A5B163 /* AcademicsHeaderCell.swift */,
+				6EBDC3CB221FD85300A5B163 /* AcademicsBodyCell.swift */,
+			);
+			path = Academics;
+			sourceTree = "<group>";
+		};
+		6EBDC3CF22202E8900A5B163 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				6ECF7EBA222533C100CF62EF /* MapsDetail */,
+				6EBDC3D222202F6200A5B163 /* Maps.swift */,
+				6EBDC3D42220309400A5B163 /* CampusesCell.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		6ECF7EBA222533C100CF62EF /* MapsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6EADBE222227BF04007AA747 /* Map */,
+				6ECF7EBB2225340A00CF62EF /* MapsDetailVC.swift */,
+				6ECF7EBD222537D600CF62EF /* MapsDetailContactsCell.swift */,
+				6EA9351922257368006F2041 /* MapsDetailDescriptionCell.swift */,
+				6EA9351B22257D33006F2041 /* MapsDetailTaxiCell.swift */,
+				6EA9351D22258950006F2041 /* MapsDetailAirCell.swift */,
+			);
+			path = MapsDetail;
+			sourceTree = "<group>";
+		};
+		6ED24ED32202F02C00BDCD82 /* NewMapsVC */ = {
+			isa = PBXGroup;
+			children = (
+				6ED24ED42202F04100BDCD82 /* NewMapsVC.swift */,
+				6ED24ED822031DAA00BDCD82 /* CampusDetail.swift */,
+				6EEA64692204136D0045691A /* MapWindowVC.swift */,
+			);
+			path = NewMapsVC;
+			sourceTree = "<group>";
+		};
 		6ED5B60121F05EA400E72AD1 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
 				2325B3D8218C6F5400DC55E2 /* MapsVC.swift */,
 				6ED5B60221F06CE700E72AD1 /* MapsCVCell.swift */,
-				6ED5B60821F0BBA100E72AD1 /* CustomPin.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -560,6 +698,35 @@
 				6EE87CD721D0CFF700A3E353 /* ScheduleTVCell.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		6EE8428822213B06007FA3D4 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				6EE8428922213B16007FA3D4 /* NewsVC.swift */,
+				6EE8428B22213FCF007FA3D4 /* NewsCell.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		6EFB3EF4221E83EF00DFC536 /* CampusPage */ = {
+			isa = PBXGroup;
+			children = (
+				6EFB3EF5221E84DC00DFC536 /* CampusPage.swift */,
+				6EFB3EF7221E873700DFC536 /* CampusBodyCell.swift */,
+				6EFB3EF9221E8AD200DFC536 /* CampusHeaderCell.swift */,
+			);
+			path = CampusPage;
+			sourceTree = "<group>";
+		};
+		6EFB3EFF221EB23A00DFC536 /* Applicant */ = {
+			isa = PBXGroup;
+			children = (
+				6EFB3F00221EB28800DFC536 /* ApplicantVC.swift */,
+				6E264493221ED8CE00A2487B /* LetterCell.swift */,
+			);
+			name = Applicant;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		DE046C8DAF249F9ACD90DB2E /* Pods */ = {
@@ -688,16 +855,15 @@
 				6EDB8AC621D0965800DD5DC9 /* ScheduleVC.storyboard in Resources */,
 				6E0F8C1321CFFB1F00B2C191 /* DatePickerViewController.storyboard in Resources */,
 				6EA964FB21D7621600581E60 /* EventsDetailVC.storyboard in Resources */,
-				6EA123E221D4D86000C11FC9 /* ContactsVC.storyboard in Resources */,
 				23976152217D8E35005614C3 /* LaunchScreen.storyboard in Resources */,
 				6E13243421D54B4B00AAC185 /* VideoVC.storyboard in Resources */,
-				6E0F8C1521D0100400B2C191 /* ApplicantVC.storyboard in Resources */,
 				6ED9AED921CE6C8B00A86781 /* CalendarPopupViewController.storyboard in Resources */,
+				6EA4A993221D92220055C53E /* Roboto-Regular.ttf in Resources */,
+				6EA9398C2212F65200080F3C /* Roboto-Medium.ttf in Resources */,
 				6EE4E39D21D4AD8900F6C3EB /* LibraryVC.storyboard in Resources */,
 				6E13243621D56A4F00AAC185 /* TicketVC.storyboard in Resources */,
 				6E13243021D5043900AAC185 /* IsmStudentVC.storyboard in Resources */,
 				6E13243821D56BFE00AAC185 /* TaxiVC.storyboard in Resources */,
-				6EFE1AA621E78BB6008C59AC /* LetterVC.storyboard in Resources */,
 				6E13242D21D502B700AAC185 /* PassportVC.storyboard in Resources */,
 				2397614F217D8E35005614C3 /* Assets.xcassets in Resources */,
 				2397614D217D8E34005614C3 /* Main.storyboard in Resources */,
@@ -849,61 +1015,91 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EBDC3CE221FE64F00A5B163 /* Academics.swift in Sources */,
 				23A2C96221C7AAD30022D2DA /* IsmStudentVC.swift in Sources */,
 				233A97C721C23B460064E681 /* EventsTVC.swift in Sources */,
+				6EBDC3D9222032E600A5B163 /* AboutUs.swift in Sources */,
+				6EA4A995221D95EB0055C53E /* ContactCampus.swift in Sources */,
+				6EA935232225ABD7006F2041 /* CouncilVC.swift in Sources */,
 				6EE87CD221D0CBF900A3E353 /* ScheduleCVCell.swift in Sources */,
+				6EA9351A22257368006F2041 /* MapsDetailDescriptionCell.swift in Sources */,
 				6EAD53B421D23AD60071118C /* Group.swift in Sources */,
+				6EFB3EF8221E873700DFC536 /* CampusBodyCell.swift in Sources */,
+				6EFB3F01221EB28800DFC536 /* ApplicantVC.swift in Sources */,
 				6ED5B60921F0BBA100E72AD1 /* CustomPin.swift in Sources */,
 				236BA74621ABB846005D5C4C /* TaxiVC.swift in Sources */,
 				2312A49E21831ACF0003D07B /* AboutPageViewController.swift in Sources */,
 				23F6999C21A556DA001E2428 /* ApiInteractor.swift in Sources */,
 				23FFEBDD21A6C39800216B71 /* LibraryVC.swift in Sources */,
+				6EBDC3C8221FD5C900A5B163 /* AcademicsVC.swift in Sources */,
 				6EAD53B621D243460071118C /* Semester.swift in Sources */,
 				2312A49C21831A980003D07B /* HomePageViewController.swift in Sources */,
+				6EBDC3D52220309400A5B163 /* CampusesCell.swift in Sources */,
+				6ED24ED922031DAA00BDCD82 /* CampusDetail.swift in Sources */,
+				6EA935252225AD07006F2041 /* Council.swift in Sources */,
 				2312A4A0218708680003D07B /* CollectionViewCell.swift in Sources */,
+				6EA9014E22130A19004A73B6 /* FooterCell.swift in Sources */,
 				2312A4A42187174E0003D07B /* HomeVC.swift in Sources */,
 				233A97C921C259120064E681 /* About.swift in Sources */,
+				6EFB3EF6221E84DC00DFC536 /* CampusPage.swift in Sources */,
 				23FFEBE121A6C54500216B71 /* Library.swift in Sources */,
 				23F699A421A56FD7001E2428 /* TicketVC.swift in Sources */,
+				6EEA646A2204136D0045691A /* MapWindowVC.swift in Sources */,
 				23A2C97121C90C3B0022D2DA /* VideoTVCell.swift in Sources */,
 				2316684821A7EB5800DDA5F4 /* Student.swift in Sources */,
 				23A2C96A21C900860022D2DA /* Video.swift in Sources */,
 				6ED9AED721CE4F4B00A86781 /* CalendarPopupViewController.swift in Sources */,
+				6EBDC3D322202F6200A5B163 /* Maps.swift in Sources */,
+				6E264494221ED8CE00A2487B /* LetterCell.swift in Sources */,
 				233A97C521C21AF90064E681 /* EventsCVCell.swift in Sources */,
+				6EA9351C22257D33006F2041 /* MapsDetailTaxiCell.swift in Sources */,
+				6EA935272225AEFB006F2041 /* CouncilCell.swift in Sources */,
 				6E13242A21D4FDF200AAC185 /* UIViewControllerNavBar.swift in Sources */,
+				6EADBE1F222795E8007AA747 /* Manual.swift in Sources */,
+				6EBDC3CA221FD84700A5B163 /* AcademicsHeaderCell.swift in Sources */,
 				23A2C97521C90CAC0022D2DA /* VideoVC.swift in Sources */,
 				6ECB0BA721DF69260034C5D3 /* PhotoCell.swift in Sources */,
 				233A97C321C219110064E681 /* Event.swift in Sources */,
 				6E34714A21E083CF007BCAD1 /* MainViewController.swift in Sources */,
 				2312A4B62188730C0003D07B /* RegistrationViewController.swift in Sources */,
 				6EFE1AA821E7A902008C59AC /* UIViewControllerTextField.swift in Sources */,
+				6EA9351E22258950006F2041 /* MapsDetailAirCell.swift in Sources */,
 				23A2C96021C79C660022D2DA /* PassportVC.swift in Sources */,
+				6EFB3EFA221E8AD200DFC536 /* CampusHeaderCell.swift in Sources */,
 				23A2C95E21C79C180022D2DA /* Passport.swift in Sources */,
 				23F6999F21A55808001E2428 /* Constaints.swift in Sources */,
 				236BA74821ABB858005D5C4C /* TaxiTVCell.swift in Sources */,
-				23A2C95421C782B30022D2DA /* ContactsTVCell.swift in Sources */,
-				233A97CB21C25DFD0064E681 /* Contact.swift in Sources */,
+				6EA9398E2212F6B400080F3C /* Constants.swift in Sources */,
+				6EADBE242227BF18007AA747 /* Map.swift in Sources */,
 				6ED5B60321F06CE700E72AD1 /* MapsCVCell.swift in Sources */,
-				23A2C95C21C788BD0022D2DA /* ContactsVC.swift in Sources */,
 				6E0F8C0E21CF8D3400B2C191 /* UIColorExtension.swift in Sources */,
 				2316684521A7C94F00DDA5F4 /* Extentions.swift in Sources */,
 				6E0F8C1121CFFB0800B2C191 /* DatePickerViewController.swift in Sources */,
 				236BA74A21AD0D91005D5C4C /* IsmViewController.swift in Sources */,
+				6EE8428A22213B16007FA3D4 /* NewsVC.swift in Sources */,
+				6ECF7EBC2225340A00CF62EF /* MapsDetailVC.swift in Sources */,
 				23A2C96821C8E1250022D2DA /* EventsDetailTVC.swift in Sources */,
 				6EAD53B821D25A1B0071118C /* Schedule.swift in Sources */,
+				6EA4A991221D8F380055C53E /* ContactsCell.swift in Sources */,
 				6EAD53BA21D262D30071118C /* Subject.swift in Sources */,
 				6EDB8AC821D09A6E00DD5DC9 /* ScheduleVC.swift in Sources */,
+				6E2E7BE52226F387004A2028 /* PassportViewController.swift in Sources */,
 				2312A4B1218862FD0003D07B /* Home.swift in Sources */,
-				6EFE1AA421E78B99008C59AC /* LetterVC.swift in Sources */,
-				2312A4B321886F830003D07B /* ApplicantVC.swift in Sources */,
 				233A97C121C218A90064E681 /* EventsDetailVC.swift in Sources */,
 				6EE87CD021D0CA9E00A3E353 /* ScheduleCV.swift in Sources */,
+				6ED24ED72202F5E900BDCD82 /* NewCampus.swift in Sources */,
 				2325B3D9218C6F5400DC55E2 /* MapsVC.swift in Sources */,
 				23F699A621A57099001E2428 /* TicketTVCell.swift in Sources */,
+				6EE8428C22213FCF007FA3D4 /* NewsCell.swift in Sources */,
+				6EADBE212227A6A9007AA747 /* PDFViewController.swift in Sources */,
 				23FFEBDF21A6C3E600216B71 /* LibraryTVCell.swift in Sources */,
+				6ECF7EBE222537D600CF62EF /* MapsDetailContactsCell.swift in Sources */,
+				6EBDC3CC221FD85300A5B163 /* AcademicsBodyCell.swift in Sources */,
 				23976148217D8E34005614C3 /* AppDelegate.swift in Sources */,
 				23F699A121A5620E001E2428 /* Tickets.swift in Sources */,
+				6ED24ED52202F04100BDCD82 /* NewMapsVC.swift in Sources */,
 				6EE87CD821D0CFF700A3E353 /* ScheduleTVCell.swift in Sources */,
+				6EA4A98F221D8F020055C53E /* ContactsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,9 +1276,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ESLCRUB8KW;
+				DEVELOPMENT_TEAM = YDG37K9NRQ;
 				INFOPLIST_FILE = ism/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1100,9 +1296,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ESLCRUB8KW;
+				DEVELOPMENT_TEAM = YDG37K9NRQ;
 				INFOPLIST_FILE = ism/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,7 +16,7 @@ class CollectionViewCell: UICollectionViewCell {
     var item: Home? {
         didSet {
             guard let item = item else { return }
-            
+            label.textColor = UIColor(red: 0.31, green: 0.31, blue: 0.31, alpha: 1)
             label.text = item.title
             imageView.image = item.icon
         }
