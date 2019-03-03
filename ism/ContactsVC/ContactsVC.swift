@@ -40,6 +40,7 @@ class ContactsVC: UIViewController, UICollectionViewDataSource, UICollectionView
                     
                     self.contactCampuses = data
                     self.setupViews()
+                    
                 }
                 
             } else {

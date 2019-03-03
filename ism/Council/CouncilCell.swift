@@ -29,6 +29,7 @@ class CouncilCell: UICollectionViewCell {
         addSubview(textLabel)
         
         constrain(councilImageView, textLabel) { councilImageView, textLabel in
+            
             councilImageView.top == councilImageView.superview!.top
             councilImageView.left == councilImageView.superview!.left
             councilImageView.right == councilImageView.superview!.right

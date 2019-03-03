@@ -108,4 +108,11 @@ class CampusPage: UIViewController, UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 70)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let url = URL(string: "tel://\(contact[0].roles[indexPath.section].contacts[indexPath.item].number)") {
+            UIApplication.shared.open(url)
+        }
+    }
 }
