@@ -40,8 +40,8 @@ class TaxiVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Relo
         }
     }
     
-    
     func reloadAfterInternetConnectionEstablished() {
+        print("little text")
         self.getTaxi()
     }
     
